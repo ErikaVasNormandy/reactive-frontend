@@ -1,0 +1,18 @@
+.businessCard{
+    display: inline-block;
+    float: left;
+
+/*    background-color: rgba(10,10,10,0.7);
+*/   
+ /*color: #e6edf7;*/
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 2vh;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    border-style: double;
+    border-width: medium;
+    border-color: black;
+}

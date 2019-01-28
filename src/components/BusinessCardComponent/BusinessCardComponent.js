@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {styles} from './window.css';
+import {styles} from './businesscard.css';
 
 
 
-class WindowComponent extends Component {
+class BusinessCardComponent extends Component {
 
 //https://i.redd.it/79qghnkw98721.jpg
 //https://i.redd.it/hm9dujjr22a21.jpg
@@ -12,24 +12,19 @@ class WindowComponent extends Component {
 ///https://i.redd.it/7oah0nilwhp11.jpg
   	constructor(props){
   		super(props);
-  		this.state = {
-  			imgUrl: "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/images/WinterMoodBoard/gHQr2Tr.jpg"
-  		}
 
   	 }
 
 
 	render() {
-		let sectionStyle = {
-			backgroundImage:`url(${this.state.imgUrl})`
-		}
+
     	return (
 
-      		<div className = "window" style={sectionStyle}>
-      	 
+      		<div className="businessCard">
+PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distrac
       		</div>
     	);
   }
 }
 
-export default WindowComponent;
+export default BusinessCardComponent;

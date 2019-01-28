@@ -1,6 +1,8 @@
 .rootElement{
-  min-height: 1000px;
-}
+  min-height: 600px;
+  
+/*  background-color: rgb(21,21,21);
+*/}
 
 .App {
   text-align: center;
