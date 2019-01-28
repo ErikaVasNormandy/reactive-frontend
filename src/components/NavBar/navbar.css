@@ -1,0 +1,39 @@
+
+.navBar{
+	margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 5px 5px 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    color: #e6edf7;
+    background-color: rgba(1,1,1,0.8);
+    position: fixed;
+    z-index: 5;
+    border-color: rgba(145,145,155,0.9);
+    border-width: medium;
+    border-bottom-style: double;
+    text-align: left;
+    padding-left: 10px;
+    text-shadow: 0 0 0.2em #a8cbff, 0 0 0.2em #a8cbff;
+    vertical-align: middle;
+
+}
+.navBar ul {
+  overflow: auto;
+  text-align: center;
+  	background-color: gray;
+}
+.navBar li {
+  list-style-type: none;
+  padding: 10px 10px 10px 10px;
+  display: inline-block;
+  width: 10%;
+
+}
+
+.displayWindow{
+
+}
