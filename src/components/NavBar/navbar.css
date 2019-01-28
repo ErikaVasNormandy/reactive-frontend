@@ -10,7 +10,8 @@
     background-color: rgba(1,1,1,0.8);
     position: fixed;
     z-index: 5;
-    border-color: rgba(145,145,155,0.9);
+    border-color: black;
+    border-style: double;
     border-width: medium;
     border-bottom-style: double;
     text-align: left;
@@ -41,10 +42,10 @@
 .displayWindow{
 /*    background-color: rgba(10,10,10,0.7);
 /*  color: #e6edf7; */
+      margin-right: 20px;
     margin-bottom: 10px;
     margin-top: 2vh;
     display: inline;
-
     padding-left: 1%;
     padding-right: 1%;
     padding-bottom: 1%;
@@ -52,6 +53,9 @@
     border-width: medium;
     border-color: black;
     float: right;
+    display: inline-block;
+    overflow-y: scroll;
+    min-width: 100%;
     min-height: 600px;
 }
 

@@ -21,8 +21,9 @@ class BusinessCardComponent extends Component {
     	return (
 
       		<div className="businessCard">
-PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distrac
-      		</div>
+          <img src = "https://zero-day.io/content/images/2017/05/start-msf.jpg"></img>
+              <p>
+                Bronze-tier technomancer for web apps and security, constant illustrator on the side. Even digitized clutter needs some razzle-dazzle with its lock :)</p>      		</div>
     	);
   }
 }

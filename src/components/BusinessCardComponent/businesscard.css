@@ -16,3 +16,13 @@
     border-width: medium;
     border-color: black;
 }
+
+.businessCard img{
+    width: 70%;
+    height: 70%;
+    border: 2px;
+    border-color: black;
+    border-style: double;
+    margin-left: 15%;
+    margin-right: 15%;
+}

@@ -39,13 +39,13 @@ class NavBarComponent extends Component {
 
 
        <WindowComponent/>
-
+        <hr/>
       	<hr/>
         <div className="row">
           <div className="col s2 m2 l2">
             <BusinessCardComponent/>
             </div>
-          <div className="col s10 m10 l10">
+          <div className="col s10 m10 l0">
             <div className="displayWindow">
       		   <Route exact path="/" component={HomeComponent} />
         	   <Route exact path="/projects" component={ProjectsComponent} />
