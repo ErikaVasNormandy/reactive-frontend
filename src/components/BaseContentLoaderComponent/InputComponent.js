@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import styles from '../index.css';
-
+import {styles} from './index.css'
 class InputComponent extends Component {
 	constructor(props){
 		super(props)
@@ -15,18 +14,16 @@ class InputComponent extends Component {
  
 
   	state = {
-    action: "",
-    title: "",
-    bodyInput: "",
-	dateStamp: Date(),
-	images: []
-
-
+      action: "",
+      title: "",
+      bodyInput: "",
+      dateStamp: Date(),
+      images: []
   }
 
   addContent = () =>{
-
-  	const task = {  action: this.state.action, 
+  	const task = {  
+            action: this.state.action, 
   					title: this.state.title,
   					dateStamp: this.state.dateStamp,
   					body: this.state.bodyInput,
@@ -34,7 +31,6 @@ class InputComponent extends Component {
   				}
 
   	console.log(task)
-
 
   	 if(task.action && task.action.length > 0){
   	 //// Submit

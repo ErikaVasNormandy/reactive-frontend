@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react';
-import ContainerComponent from '../BaseContentLoaderComponent/TileComponent'
+import ContainerComponent from '../BaseContentLoaderComponent/ContainerComponent'
 
 import { BrowserRouter, Route, Link } from "react-router-dom";
 

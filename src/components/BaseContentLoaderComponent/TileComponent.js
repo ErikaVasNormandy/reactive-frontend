@@ -7,7 +7,7 @@ class TileComponent extends Component {
 	constructor(props){
 		super(props);
 		// this.showImages = this.showImages.bind(this)
-
+		{}
 	}
 
 	state = {
@@ -34,7 +34,7 @@ class TileComponent extends Component {
                  		 		<img src={image}/>
 	                	  </li>
                			)})}
-              	
+         
 				</div>
 
 
