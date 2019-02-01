@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {styles} from './index.css'
+import {styles} from './basecontent.css'
 class InputComponent extends Component {
 	constructor(props){
 		super(props)
@@ -82,17 +82,14 @@ class InputComponent extends Component {
     let { action } = this.state;
     return (
       <div className="newPost">
-      	Action
-        <p><input type="text" onChange={this.handleChange} value={action}/></p>
-        Title
-        <p><input type="text" onChange={this.handleTitleChange} value={this.state.title}/></p>
-        Body
-        <p><textarea onChange={this.handleChange2} value={this.state.bodyInput}/></p>
-
-        Images
-        <p><input type="text" onChange={this.handleImageChange} value={this.state.images}/></p>
-        <button onClick={this.addContent}>Add Content</button>
-
+        <div className="input-field">
+          <input type="text" onChange={this.handleChange} value={action}/>
+          <input placeholder="TITLE"  type="text" onChange={this.handleTitleChange} value={this.state.title}/>
+          <textarea placeholder="What'll you say?" className="materialize-textarea" onChange={this.handleChange2} value={this.state.bodyInput}/>
+          <input type="text" placeholder="Paste Image URL's Here " onChange={this.handleImageChange} value={this.state.images}/>
+          <span><h6>Today Date: {this.state.dateStamp}</h6></span>
+          <button onClick={this.addContent}className="btn waves-effect waves-light color: blue-grey darken-2"  >Add Content</button>
+        </div>
       </div>
     )
   }

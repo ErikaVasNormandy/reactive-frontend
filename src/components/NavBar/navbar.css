@@ -40,9 +40,7 @@
 }
 
 .displayWindow{
-/*    background-color: rgba(10,10,10,0.7);
-/*  color: #e6edf7; */
-      margin-right: 20px;
+   margin-right: 20px;
     margin-bottom: 10px;
     margin-top: 2vh;
     display: inline;
@@ -57,6 +55,7 @@
     overflow-y: scroll;
     min-width: 100%;
     min-height: 600px;
+    max-height: 2000px;
 }
 hr{
   border-color: black;

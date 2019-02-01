@@ -6,9 +6,9 @@ const Schema = mongoose.Schema;
 
 const ContentSchema = new Schema({
 	
-	action: {
-		type: String, 
-		required: [true, "the field is required"]
+	body: {
+		type: String
+		
 	},
 	dateStamp: { 
 		type: Date,

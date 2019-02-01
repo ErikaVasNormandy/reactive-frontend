@@ -23,10 +23,16 @@ class TileComponent extends Component {
 
 		return(
 				<div className = "tileComponent">
-					<h1>Tile Component</h1>
-					<p><span>this.props.titleProp ----->  {this.props.titleProp}</span></p>
-					<p><span>this.props.bodyProp ----->  {this.props.bodyProp}</span></p>
-					<p><span>this.props.dateProp ------> {this.props.dateProp}</span></p>
+					<div className ="row">
+						<div className = "col s5 m5 l5">
+							<h5>{this.props.titleProp}</h5>
+
+						</div>
+						<div className = "col s5 m5 l5">
+							<p><span> {this.props.dateProp}</span></p>
+						</div>
+
+					</div>
 						
 					{this.props.imagesProp.map(image => {
                		 	return(
@@ -34,7 +40,8 @@ class TileComponent extends Component {
                  		 		<img src={image}/>
 	                	  </li>
                			)})}
-         
+ 					<p><span>{this.props.bodyProp}</span></p>
+
 				</div>
 
 

@@ -2,7 +2,8 @@ import React from 'react';
 import TileComponent from './TileComponent';
 
 const ListComponent = ({ contents, deleteContent }) => {
-///onClick={() => deleteContent(content._id)}
+  // onClick = ()=>  {deleteContent(content._id)}
+  
   return (
     <ul>
       {
@@ -12,7 +13,16 @@ const ListComponent = ({ contents, deleteContent }) => {
               contents.map(content => {
                 return(
                   <li key={content._id} > 
-                    <TileComponent titleProp= {content.title} dateProp = {content.dateStamp} bodyProp={content.body} imagesProp = {content.images}/> 
+                    <TileComponent 
+                    titleProp= {content.title} 
+                    dateProp = {content.dateStamp} 
+                    bodyProp={content.body} 
+                    imagesProp = {content.images} 
+                    // onClickProp = {}
+                    >
+                    </TileComponent>
+                                        <button onClick={() => deleteContent(content._id)}>Delete</button>
+
                   </li>
                 )
               })

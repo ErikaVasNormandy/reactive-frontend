@@ -15,7 +15,6 @@ class ContainerComponent extends Component {
   }
 
   getContents = () => {
-    console.log("GET CONTENTS IN THE CONTAINERcOMPONENT")
     axios.get('/api/contents')
       .then(res => {
         if(res.data){
@@ -23,7 +22,6 @@ class ContainerComponent extends Component {
             contents: res.data
           })
 
-          console.log("GET CONTENTS")
         }
       })
       .catch(err => console.log(err))
@@ -46,10 +44,8 @@ class ContainerComponent extends Component {
 
     return(
       <div>
-        <h1>My Todo(s)</h1>
       {/* Ping the mlab server and get the contents back*/}
         { this.getContents()}
-            {console.log("GET CONTENTS IN THE CONTAINERcOMPONENT")}
 
         <InputComponent getContents={this.getContents}/>
 
