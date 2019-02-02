@@ -8,8 +8,6 @@ import TileComponent from './TileComponent';
 import sharedStyles from '../../App.css'
 
 require('dotenv').config();
-const pw = process.env.PW
-
 
 
 class ContainerComponent extends Component {
@@ -82,10 +80,10 @@ class ContainerComponent extends Component {
     
 
 
-            <button className="material-icons" onClick={this.toggleAdminItem} value="showAdmin">palette</button>
+          <button className="blue-grey lighten-4 adminBtn material-icons waves-effect waves-light btn" onClick={this.toggleAdminItem} value="showAdmin">videogame_asset</button>
 
         {/* Render out the contents via a list */}
-          <ListComponent contents={contents} deleteContent={this.deleteContent}/>
+          <ListComponent contents={contents} deleteContent={this.deleteContent} isVisible={this.state.showAdminPanel}/>
       </div>
     )
   }

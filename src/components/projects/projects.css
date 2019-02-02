@@ -1,4 +1,11 @@
 
+button:active{
+
+}
+button:clicked{
+}
+
+
 textarea {
   padding: 5px 5px 5px 5px;
   width: 100% !important;
@@ -25,8 +32,9 @@ textarea {
 .tileComponent img {
   width: 100%;
   
-
 }
+
+
 .newPost{
     border-style: solid;
     text-align: left;

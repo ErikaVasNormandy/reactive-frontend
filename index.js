@@ -41,7 +41,6 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`)
-  console.log(`${process.env.DB}`)
 });
 
 

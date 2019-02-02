@@ -1,6 +1,9 @@
 .adminItem{
   display: none;
 }
+.adminBtn{
+  float: right;
+}
 .rootElement{
   min-height: 600px;
   

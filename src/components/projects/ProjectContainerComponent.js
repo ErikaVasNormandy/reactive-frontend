@@ -6,7 +6,6 @@ import ProjectListComponent from './ProjectListComponent';
 import TileComponent from './TileComponent';
 
 require('dotenv').config();
-const pw = process.env.PW
 
 
 
@@ -14,14 +13,14 @@ class ProjectContainerComponent extends Component {
   constructor(props){
     super(props)
 
-    this.toggleAdminItemProject = this.toggleAdminItemProject.bind(this);
+    this.toggleAdminItem = this.toggleAdminItem.bind(this);
 
   }
 
 
   getInitialState(){
     this.setState({
-      showAdminPanelProject: false
+      showAdminPanel: false
     })
   }
 
@@ -59,14 +58,17 @@ class ProjectContainerComponent extends Component {
 
 
 
-  toggleAdminItemProject(e){
-    var auth = window.prompt("Create a New Project: ")
-    if(auth == `${process.env.REACT_APP_PW}`){
-    this.setState({ 
-      showAdminPanel: !this.state.showAdminPanel 
-    });
+  toggleAdminItem(e){
+    var authProject = window.prompt("Create a New Project: ")
+    // if(authProject == `${process.env.REACT_APP_PW_PROJ}`){
+    //   console.log("Hello projects!")
+    console.log("hello from toggle")
+       this.setState({ 
+          showAdminPanel: true
+       });
 
-  }
+
+  // }
 }
 
 
@@ -79,9 +81,9 @@ class ProjectContainerComponent extends Component {
       {/* Ping the mlab server and get the contents back*/}
         { this.getProjects()}
 
-        {this.state.showAdminPanelProject ? <ProjectInputComponent getProjects={this.getProjects}/> : null }
-        <button className="material-icons" onClick={this.toggleAdminItemProject} value="showAdmin">palette</button>
+         {this.state.showAdminPanel ? <ProjectInputComponent getProjects={this.getProjects}/> : null }
 
+        <button className="blue-grey lighten-4 adminBtn material-icons waves-effect waves-light btn " onClick={this.toggleAdminItem} value="showAdmin">palette</button>
 
         {/* Render out the contents via a list */}
         <ProjectListComponent projects={projects} deleteProject={this.deleteProject}/>
