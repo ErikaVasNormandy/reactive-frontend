@@ -82,7 +82,7 @@ class ContainerComponent extends Component {
     
 
 
-            <button className="material-icons" onClick={this.toggleAdminItem} value="showAdmin">videogame_asset</button>
+            <button className="material-icons" onClick={this.toggleAdminItem} value="showAdmin">palette</button>
 
         {/* Render out the contents via a list */}
           <ListComponent contents={contents} deleteContent={this.deleteContent}/>
