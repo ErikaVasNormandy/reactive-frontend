@@ -6,9 +6,9 @@ const Schema = mongoose.Schema;
 
 const ContentSchema = new Schema({
 	
-	body: {
-		type: String
-		
+	action: {
+		type: String, 
+		required: [true, "the field is required"]
 	},
 	dateStamp: { 
 		type: Date,
@@ -20,7 +20,8 @@ const ContentSchema = new Schema({
 		type: String, 
 		required: [true, "the field is required"]
 	},
-	images: Array
+	images: Array,
+	comments: Array
 	
 
 })
