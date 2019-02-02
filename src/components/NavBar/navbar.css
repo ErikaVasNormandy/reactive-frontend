@@ -40,6 +40,8 @@
 }
 
 .displayWindow{
+      border-radius: 15px;
+      overflow: auto;
    margin-right: 20px;
     margin-bottom: 10px;
     margin-top: 2vh;
@@ -52,7 +54,6 @@
     border-color: black;
     float: right;
     display: inline-block;
-    overflow-y: scroll;
     min-width: 100%;
     min-height: 600px;
 }

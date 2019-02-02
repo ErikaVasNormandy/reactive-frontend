@@ -19,11 +19,20 @@ class BusinessCardComponent extends Component {
 	render() {
 
     	return (
+         <div id="sideMenu" className="card large">
+          <img className="menuImg" src="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/images/VoidRune2MenuImg.png"></img>
 
-      		<div className="businessCard">
-          <img src = "https://zero-day.io/content/images/2017/05/start-msf.jpg"></img>
-              <p>
-                Bronze-tier technomancer for web apps and security, constant illustrator on the side. Even digitized clutter needs some razzle-dazzle with its lock :)</p>      		</div>
+
+              <p className = "sideMenuText">Bronze-tier technomancer for web apps and security, constant illustrator on the side. Even digitized clutter needs some razzle-dazzle with its lock :)  
+                <ul className="sideMenuLinks">
+                  <li className="sideMenuLinksLI"><a className="sideMenuLinksA" href="https://github.com/ErikaVasNormandy">Github</a></li>
+                  <li className="sideMenuLinksLI"><a className= "sideMenuLinksA" href="https://www.linkedin.com/in/erika-hudiono-97a0285b">LinkedIn</a></li>
+                </ul>
+
+                </p>
+      </div>
+
+      
     	);
   }
 }

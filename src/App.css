@@ -1,3 +1,6 @@
+.adminItem{
+  display: none;
+}
 .rootElement{
   min-height: 600px;
   

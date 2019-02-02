@@ -4,6 +4,8 @@ textarea {
   width: 100% !important;
   min-height: 150px !important;
   background-color: white;
+      border-radius: 15px;
+
 }
 
 .deleteButton{
@@ -19,6 +21,8 @@ textarea {
     margin: auto;
     margin-bottom: 1%;
     color: black;
+        border-radius: 15px;
+
 
 
 }
@@ -27,7 +31,9 @@ textarea {
   
 
 }
+
 .newPost{
+
     border-style: solid;
     text-align: left;
     width: 100%;
@@ -37,6 +43,8 @@ textarea {
     color: black !important;
     margin-left: auto !important;
     padding: 10px 10px 10px 10px;
+        border-radius: 10px;
+
 }
 
 

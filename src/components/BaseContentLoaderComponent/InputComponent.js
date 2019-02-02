@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {styles} from './basecontent.css'
+import sharedStyles from '../../App.css'
+
 class InputComponent extends Component {
 	constructor(props){
 		super(props)
@@ -81,7 +83,7 @@ class InputComponent extends Component {
  render() {
     let { action } = this.state;
     return (
-      <div className="newPost">
+      <div className="newPost adminItem">
         <div className="input-field">
           <input placeholder="TITLE"  type="text" onChange={this.handleTitleChange} value={this.state.title}/>
           <textarea placeholder="What'll you say?" className="materialize-textarea" onChange={this.handleChange2} value={this.state.bodyInput}/>
