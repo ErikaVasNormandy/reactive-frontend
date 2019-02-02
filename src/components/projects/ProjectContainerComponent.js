@@ -4,7 +4,21 @@ import axios from 'axios';
 import ProjectInputComponent from './ProjectInputComponent';
 import ProjectListComponent from './ProjectListComponent';
 import TileComponent from './TileComponent';
+
 class ProjectContainerComponent extends Component {
+  constructor(props){
+    super(props)
+
+    this.toggleAdminItemProject = this.toggleAdminItemProject.bind(this);
+
+  }
+
+
+  getInitialState(){
+    this.setState({
+      showAdminPanelProject: false
+    })
+  }
 
   state = {
     projects: []
@@ -38,6 +52,18 @@ class ProjectContainerComponent extends Component {
       .catch(err => console.log(err))
   }
 
+
+
+  toggleAdminItemProject(e){
+    var auth = window.prompt(e.target.value)
+    if(auth == "password"){
+    this.setState({ 
+      showAdminPanelProjects: !this.state.showAdminPanelProjects
+    });
+
+  }
+}
+
   render() {
     {/* What is this for? */}
     let { projects } = this.state;
@@ -47,7 +73,9 @@ class ProjectContainerComponent extends Component {
       {/* Ping the mlab server and get the contents back*/}
         { this.getProjects()}
 
-        <ProjectInputComponent getProjects={this.getProjects}/>
+        {this.state.showAdminPanelProject ? <ProjectInputComponent getProjects={this.getProjects}/> : null }
+        <button onClick={this.toggleAdminItemProject} value="showAdmin">'Login'</button>
+
 
         {/* Render out the contents via a list */}
         <ProjectListComponent projects={projects} deleteProject={this.deleteProject}/>

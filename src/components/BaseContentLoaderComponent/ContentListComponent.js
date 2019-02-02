@@ -1,5 +1,7 @@
 import React from 'react';
 import TileComponent from './TileComponent';
+import sharedStyles from '../../App.css'
+
 
 const ListComponent = ({ contents, deleteContent }) => {
   // onClick = ()=>  {deleteContent(content._id)}
