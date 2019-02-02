@@ -21,7 +21,7 @@ const ListComponent = ({ contents, deleteContent }) => {
                     // onClickProp = {}
                     >
                     </TileComponent>
-                                        <button onClick={() => deleteContent(content._id)}>Delete</button>
+                    <button onClick={() => deleteContent(content._id)}  className="deleteButton btn waves-effect waves-light color: blue-grey darken-2" >Delete</button>
 
                   </li>
                 )

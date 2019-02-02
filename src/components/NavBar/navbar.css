@@ -55,11 +55,10 @@
     overflow-y: scroll;
     min-width: 100%;
     min-height: 600px;
-    max-height: 2000px;
 }
 hr{
   border-color: black;
   color: black;
-  style: double;
+  border-style: double;
   ;
 }

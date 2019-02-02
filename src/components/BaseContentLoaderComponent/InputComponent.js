@@ -23,7 +23,7 @@ class InputComponent extends Component {
 
   addContent = () =>{
   	const task = {  
-            action: this.state.action, 
+            action: this.state.title, 
   					title: this.state.title,
   					dateStamp: this.state.dateStamp,
   					body: this.state.bodyInput,
@@ -83,12 +83,11 @@ class InputComponent extends Component {
     return (
       <div className="newPost">
         <div className="input-field">
-          <input type="text" onChange={this.handleChange} value={action}/>
           <input placeholder="TITLE"  type="text" onChange={this.handleTitleChange} value={this.state.title}/>
           <textarea placeholder="What'll you say?" className="materialize-textarea" onChange={this.handleChange2} value={this.state.bodyInput}/>
           <input type="text" placeholder="Paste Image URL's Here " onChange={this.handleImageChange} value={this.state.images}/>
           <span><h6>Today Date: {this.state.dateStamp}</h6></span>
-          <button onClick={this.addContent}className="btn waves-effect waves-light color: blue-grey darken-2"  >Add Content</button>
+          <button onClick={this.addContent}className="btn waves-effect waves-light color: blue-grey darken-2" >Add Content</button>
         </div>
       </div>
     )

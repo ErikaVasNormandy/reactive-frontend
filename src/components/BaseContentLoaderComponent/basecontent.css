@@ -1,21 +1,23 @@
 
 textarea {
+  padding: 5px 5px 5px 5px;
   width: 100% !important;
   min-height: 150px !important;
   background-color: white;
 }
-button{
-  margin-left: 75%;
 
+.deleteButton{
+  margin-bottom: 50px;
+  margin-left: 48%;
 }
 .tileComponent{
-  border-style: solid;
+    border-style: solid;
 
     width: 640px;
     min-height: 805px;
     background-color: white;
     margin: auto;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
     color: black;
 
 

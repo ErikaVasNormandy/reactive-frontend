@@ -24,11 +24,11 @@ class TileComponent extends Component {
 		return(
 				<div className = "tileComponent">
 					<div className ="row">
-						<div className = "col s5 m5 l5">
+						<div className = "col s8 m8 l8">
 							<h5>{this.props.titleProp}</h5>
 
 						</div>
-						<div className = "col s5 m5 l5">
+						<div className = "col s2 m2 l2">
 							<p><span> {this.props.dateProp}</span></p>
 						</div>
 
