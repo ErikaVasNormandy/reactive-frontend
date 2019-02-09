@@ -10,11 +10,12 @@ import AboutComponent from '../about/AboutComponent'
 import WindowComponent from '../WindowComponent/WindowComponent'
 import BusinessCardComponent from '../BusinessCardComponent/BusinessCardComponent'
 
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 class NavBarComponent extends Component {
   render() {
     return (
+     <div>
       <BrowserRouter>
        <div>
       	<div className ="navBar">
@@ -46,18 +47,22 @@ class NavBarComponent extends Component {
             <BusinessCardComponent/>
             </div>
           <div className="col s10 m10 l0">
-            <div className="displayWindow">
+           <Switch>
+	    <div className="displayWindow">
       		   <Route exact path="/" component={HomeComponent} />
         	   <Route exact path="/projects" component={ProjectsComponent} />
         	   <Route exact path="/artwork" component={ArtworkComponent} />
         	   <Route exact path="/worldbuilding" component={WorldBuildingComponent} />
         	   <Route exact path="/about" component={AboutComponent} />
-          </div>
+            </div>
+           </Switch>
       	 </div>
          </div>
 
         </div>
       </BrowserRouter>
+    </div>
+    
     );
   }
 }
