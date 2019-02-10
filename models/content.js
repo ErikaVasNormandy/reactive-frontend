@@ -11,7 +11,7 @@ const ContentSchema = new Schema({
 		required: [true, "the field is required"]
 	},
 	dateStamp: { 
-		type: Date,
+		type: String,
 		required: [true,"date is required"]
 
 	},

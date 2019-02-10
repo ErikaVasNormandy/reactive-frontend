@@ -14,7 +14,7 @@ projectrouter.get('/projects', (req, res, next) => {
 
 projectrouter.post('/projects', (req, res, next) => {
 	if(req){
-    	Project.create(req.body)
+    	Project.create(req)
      	 .then(data => res.json(data))
       	.catch(next)
   	} 

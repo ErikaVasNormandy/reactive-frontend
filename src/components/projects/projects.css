@@ -1,4 +1,54 @@
 
+.tileComponentProject {
+	  width: 300px;
+	  min-height: 400px;
+    background-color: rgba(10,10,10,0.1);
+    margin: auto;
+    margin-bottom: 1%;
+    color: black;
+    overflow: hidden;
+    padding: 1px 1px 1px 1px;
+    border-radius: 10px;
+
+}
+
+.tileComponentProject h5{
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 10px 10px 10px;
+
+}
+.dateStamp{
+	font-size: 5px;
+}
+.imageContainer{
+  width: 100%;
+  height: 250px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.imageContainer img{
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.project_ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.project_li{
+	float: left;
+	margin: 5px 5px 5px 5px;
+}
+
+
 button:active{
 
 }
@@ -17,23 +67,6 @@ textarea {
   margin-bottom: 50px;
   margin-left: 48%;
 }
-.tileComponent{
-    border-style: solid;
-
-    width: 640px;
-    min-height: 805px;
-    background-color: white;
-    margin: auto;
-    margin-bottom: 1%;
-    color: black;
-
-
-}
-.tileComponent img {
-  width: 100%;
-  
-}
-
 
 .newPost{
     border-style: solid;

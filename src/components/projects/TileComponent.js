@@ -13,8 +13,8 @@ class TileComponent extends Component {
 	state = {
 		action: "",
 		titleProp: "", 
-		bodyProp: "",
-		dateProp: Date(),
+		tagsProp: "",
+		dateProp: "",
 		imagesProp: []
 	}
 
@@ -22,14 +22,14 @@ class TileComponent extends Component {
 	render(){
 
 		return(
-				<div className = "tileComponent">
+				<div className = "tileComponentProject">
 					<div className ="row">
 						<div className = "col s8 m8 l8">
-							<h5>{this.props.titleProp}</h5>
-
+							<h5>{this.props.titleProp}  </h5>
+								
 						</div>
-						<div className = "col s2 m2 l2">
-							<p><span> {this.props.dateProp}</span></p>
+						<div className = "col s4 m4 l4 datestamp">
+							{this.props.dateProp} 
 						</div>
 
 					</div>
@@ -37,10 +37,13 @@ class TileComponent extends Component {
 					{this.props.imagesProp.map(image => {
                		 	return(
                  		 	<li key={image}> 
-                 		 		<img src={image}/>
+                 		 		<div className="imageContainer"><img src={image}/></div>
 	                	  </li>
                			)})}
- 					<p><span>{this.props.bodyProp}</span></p>
+						<div>
+							{this.props.tagsProp}
+							
+						</div>
 
 				</div>
 

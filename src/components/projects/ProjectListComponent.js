@@ -1,31 +1,52 @@
-import React from 'react';
+import React, {Component} from 'react';
 import TileComponent from './TileComponent';
 
-const ProjectListComponent = ({ projects, deleteProject }) => {
+
+
+class ProjectListComponent extends Component{ 
+
+
+  constructor(props){
+    super(props)
+    this.setState({
+
+    sortedprojects: this.props.projects.sort((a,b) => {
+      return new Date(a.dateStamp).getTime() > new Date(b.dateStamp).getTime()
+    })
+   })
+
+  }
+
+
   // onClick = ()=>  {deleteContent(content._id)}
-    return (
-    <ul>
-      {
-        projects &&
-          projects.length > 0 ?
-          (
-              projects.map(project => {
+    render(){
+      return(
+      <div>
+        <ul className="project_ul">
+        // {console.log(this.sortedprojects)}
+        {
+          this.props.projects &&
+            this.props.projects.length > 0 ?
+            (
+              this.props.projects.map(project => {
                 return(
-                      <li key={project._id}> 
+                      <li key={project.dateStamp} className="project_li"> 
+                           {/* { console.log("project list body input::", project.images)} */}
+                            
                         <TileComponent 
                           titleProp= {project.title} 
                           dateProp = {project.dateStamp} 
-                          bodyProp={project.basicDescription} 
+                          tagsProp={project.tags} 
                           imagesProp = {project.images} 
-                    // onClickProp = {}
                         ></TileComponent>
-                        <button onClick={() => deleteProject(project._id)}  className="adminItem deleteButton btn waves-effect waves-light color: blue-grey darken-2" >Delete</button>
+                        <button onClick={() => this.props.deleteProject(project._id)}  className="adminItem deleteButton btn waves-effect waves-light color: blue-grey darken-2" >Delete</button>
                       </li>
                        )   
                 })
-          ): ( <li>No todo(s) left</li>)
+            ): ( <li>Loading Projects...</li>)
         }
       </ul>
+      </div>
 )}
-
+}
 export default ProjectListComponent

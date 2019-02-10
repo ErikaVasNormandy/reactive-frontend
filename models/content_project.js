@@ -6,10 +6,16 @@ const Schema = mongoose.Schema;
 
 const ContentProjectSchema = new Schema({
 	
+	dateStamp: { 
+		type: Date,
+		required: [true,"date is required"]
 
-	dateStamp: Date,
+	},
 	title: String,
-	basicDescription: String,
+	body: {
+		type: String, 
+		required: [true, "the field is required"]
+	},
 	images: Array,
 	tags: Array,
 	link: String

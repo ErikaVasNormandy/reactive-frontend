@@ -81,6 +81,7 @@ class ContainerComponent extends Component {
 
 
           <button className="blue-grey lighten-4 adminBtn material-icons waves-effect waves-light btn" onClick={this.toggleAdminItem} value="showAdmin">videogame_asset</button>
+        {console.log(this.state.showAdminPanel)}
 
         {/* Render out the contents via a list */}
           <ListComponent contents={contents} deleteContent={this.deleteContent} isVisible={this.state.showAdminPanel}/>
