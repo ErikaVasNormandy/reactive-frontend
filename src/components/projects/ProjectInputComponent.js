@@ -16,11 +16,11 @@ class ProjectInputComponent extends Component {
  
 
   	state = {
-      action: "",
-      title: "",
-      bodyInput: "",
-      dateStamp: Date(),
-      images: []
+                 action: "",
+                 title: "",
+                 bodyInput: "",
+                 dateStamp: Date(),
+                 images: []
   }
 
   addProject = () =>{
