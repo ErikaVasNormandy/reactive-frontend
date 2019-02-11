@@ -9,7 +9,6 @@ const ContentProjectSchema = new Schema({
 	dateStamp: { 
 		type: Date,
 		required: [true,"date is required"]
-
 	},
 	title: String,
 	body: {

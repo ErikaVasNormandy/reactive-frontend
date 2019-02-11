@@ -4,7 +4,11 @@ import {styles} from './projects.css'
 import sharedStyles from '../../App.css'
 
 let today = new Date();
-let todayString = today.toDateString()
+let todayString = today.toLocaleString()
+
+// var moment = require('moment');
+// let today = new Date();
+// let todayString = moment().format("MMM Do, YYYY");
 
 
 class ProjectInputComponent extends Component {
@@ -16,9 +20,13 @@ class ProjectInputComponent extends Component {
 		this.handleImageChange = this.handleImageChange.bind(this);
 		this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
-
 	}
- 
+
+
+  componentDidMount() {
+  }
+
+
 
   	state = {
                  action: "",
@@ -41,7 +49,7 @@ class ProjectInputComponent extends Component {
   					images: this.state.images
   				}
 
-  	console.log(task)
+  	console.log("TASK         ", task)
 
   	 if(task.title && task.title.length > 0){
   	 //// Submit
@@ -97,7 +105,7 @@ class ProjectInputComponent extends Component {
           <input placeholder="TITLE"  type="text" onChange={this.handleTitleChange} value={this.state.title}/>
           <textarea placeholder="What'll you say?" className="materialize-textarea" onChange={this.handleBodyChange} value={this.state.bodyInput}/>
           <input type="text" placeholder="Paste Image URL's Here " onChange={this.handleImageChange} value={this.state.images}/>
-          <span><h6>Todays Date: {this.state.dateStamp}</h6></span>{console.log(this.state.dateStamp)}
+          <span><h6>Todays Date: {this.state.dateStamp}</h6></span>
           <button onClick={this.addProject}className="btn waves-effect waves-light color: blue-grey darken-2" >Add Project</button>
         </div>
       </div>

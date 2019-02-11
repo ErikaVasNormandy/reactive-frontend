@@ -8,7 +8,8 @@ class ProjectListComponent extends Component{
 
   constructor(props){
     super(props)
-    this.setState({
+    this.setState({ 
+      childShowAdmin:false,
 
     sortedprojects: this.props.projects.sort((a,b) => {
       return new Date(a.dateStamp).getTime() > new Date(b.dateStamp).getTime()
@@ -16,6 +17,9 @@ class ProjectListComponent extends Component{
    })
 
   }
+  componentWillReceiveProps(newProps) {
+    this.setState({childShowAdmin: newProps.isVisible});
+}
 
 
   // onClick = ()=>  {deleteContent(content._id)}
@@ -23,14 +27,13 @@ class ProjectListComponent extends Component{
       return(
       <div>
         <ul className="project_ul">
-        // {console.log(this.sortedprojects)}
         {
           this.props.projects &&
             this.props.projects.length > 0 ?
             (
               this.props.projects.map(project => {
                 return(
-                      <li key={project.dateStamp} className="project_li"> 
+                      <li key={project._id} className="project_li"> 
                            {/* { console.log("project list body input::", project.images)} */}
                             
                         <TileComponent 
@@ -39,7 +42,8 @@ class ProjectListComponent extends Component{
                           tagsProp={project.tags} 
                           imagesProp = {project.images} 
                         ></TileComponent>
-                        <button onClick={() => this.props.deleteProject(project._id)}  className="adminItem deleteButton btn waves-effect waves-light color: blue-grey darken-2" >Delete</button>
+
+                        {this.state.childShowAdmin ? <button onClick={() => this.props.deleteProject(project._id)}  className="  btn waves-effect waves-light color: blue-grey darken-2" >Delete</button>: null }
                       </li>
                        )   
                 })

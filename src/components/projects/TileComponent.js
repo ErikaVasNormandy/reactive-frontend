@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 
+var moment = require('moment');
 
 class TileComponent extends Component {
 	constructor(props){
@@ -28,8 +29,8 @@ class TileComponent extends Component {
 							<h5>{this.props.titleProp}  </h5>
 								
 						</div>
-						<div className = "col s4 m4 l4 datestamp">
-							{this.props.dateProp} 
+						<div className = "col s4 m4 l4 dateStamp">
+							{this.props.dateProp.split("T")[0]} 
 						</div>
 
 					</div>
@@ -42,7 +43,7 @@ class TileComponent extends Component {
                			)})}
 						<div>
 							{this.props.tagsProp}
-							
+
 						</div>
 
 				</div>

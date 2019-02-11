@@ -13,13 +13,20 @@
 }
 
 .tileComponentProject h5{
-	font-size: 20px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+	font-size: 120%;
 	font-weight: bold;
 	padding: 10px 10px 10px 10px;
 
 }
 .dateStamp{
-	font-size: 5px;
+	font-size: 12px;
+  float: right;
+  margin-top: 20px;
+  padding-top: 20px;
+
 }
 .imageContainer{
   width: 100%;
