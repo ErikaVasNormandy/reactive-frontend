@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import _ from 'lodash';
 import moment from 'moment';
 
@@ -12,9 +11,7 @@ const createMarkup = encodedHtml => ({
 class TileComponent extends Component {
 	constructor(props){
 		super(props);
-		this.createMarkup = this.createMarkup.bind(this)
-		// this.showImages = this.showImages.bind(this)
-		{}
+
 	}
 
 	state = {

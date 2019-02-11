@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import _ from 'lodash';
+import moment from 'moment';
 
+
+const createMarkup = encodedHtml => ({
+  __html: _.unescape(encodedHtml),
+});
 
 
 class TileComponent extends Component {
 	constructor(props){
 		super(props);
-		// this.showImages = this.showImages.bind(this)
-		{}
+	}
+
+	createMarkup() {
+  	return {__html: 'First &middot; Second'};
 	}
 
 	state = {
@@ -20,27 +27,28 @@ class TileComponent extends Component {
 
 
 	render(){
+		const displayDate = moment(this.props.dateProp).format('ddd, DD-MMM-YYYY')
 
 		return(
 				<div className = "tileComponent">
 					<div className ="row">
 						<div className = "col s8 m8 l8">
 							<h5>{this.props.titleProp}</h5>
-
-						</div>
-						<div className = "col s2 m2 l2">
-							<p><span> {this.props.dateProp}</span></p>
 						</div>
 
+
+						<div className = "col s4 m4 l4 baseDateStamp">
+							{displayDate}
+						</div>
 					</div>
 						
 					{this.props.imagesProp.map(image => {
                		 	return(
                  		 	<li key={image}> 
-                 		 		<img src={image}/>
+                 		 		<div className="baseImageContainer"><img src={image}/></div>
 	                	  </li>
                			)})}
- 					<p><span>{this.props.bodyProp}</span></p>
+ 					<p>{this.props.bodyProp}</p>
 
 				</div>
 

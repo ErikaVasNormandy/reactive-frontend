@@ -5,10 +5,8 @@ import {styles} from './basecontent.css'
 class InputComponent extends Component {
 	constructor(props){
 		super(props)
-
 		this.handleChange = this.handleChange.bind(this);
 		this.handleChange2 = this.handleChange2.bind(this);
-
 		this.handleTitleChange = this.handleTitleChange.bind(this);
 
 	}
@@ -33,7 +31,7 @@ class InputComponent extends Component {
 
   	console.log(task)
 
-  	 if(task.action && task.action.length > 0){
+  	if(task.action && task.action.length > 0){
   	 //// Submit
       axios.post('/api/contents', task)
         .then(res => {
@@ -52,9 +50,6 @@ class InputComponent extends Component {
       console.log('input field required')
     }
   }
-
-
-  
 
   handleChange = (e) => {
   	this.setState({

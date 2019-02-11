@@ -29,7 +29,6 @@ class ProjectContainerComponent extends Component {
 
   componentDidMount(){
     this.getProjects();
-    // this.toggleAdminItem();
   }
 
   getProjects = () => {
@@ -46,7 +45,6 @@ class ProjectContainerComponent extends Component {
   }
 
   deleteProject = (id) => {
-
     axios.delete(`/api/projects/${id}`)
       .then(res => {
         if(res.data){

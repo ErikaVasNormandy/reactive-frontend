@@ -4,7 +4,7 @@ textarea {
   width: 100% !important;
   min-height: 150px !important;
   background-color: white;
-      border-radius: 15px;
+  border-radius: 15px;
 
 }
 
@@ -13,27 +13,34 @@ textarea {
   margin-left: 48%;
 }
 .tileComponent{
-    border-style: solid;
+  border-radius: 15px;
+  background-color: rgba(10,10,10,0.2); 
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
-    width: 640px;
-    min-height: 805px;
-    background-color: white;
-    margin: auto;
-    margin-bottom: 1%;
-    color: black;
-        border-radius: 15px;
-
-
-
+  width: 640px;
+  min-height: 805px;
+  margin: auto;
+  margin-bottom: 1%;
 }
 .tileComponent img {
   width: 100%;
-  
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
 
+.tileComponent h5{
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 200%;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
 }
 
 .newPost{
-
     border-style: solid;
     text-align: left;
     width: 100%;
@@ -43,11 +50,30 @@ textarea {
     color: black !important;
     margin-left: auto !important;
     padding: 10px 10px 10px 10px;
-        border-radius: 10px;
+    border-radius: 10px;
 
 }
 
 
+.baseImageContainer{
+  width: 100%;
+  max-height: 800px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.baseImageContainer img{
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.baseDateStamp{
+  font-size: 16px;
+  float: right;
+  margin-top: 30px;
+  padding-top: 20px;
+}
 
 body {
   margin: 0;
