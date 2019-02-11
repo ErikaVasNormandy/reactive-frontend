@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import _ from 'lodash';
+import moment from 'moment';
 
 
-var moment = require('moment');
+const createMarkup = encodedHtml => ({
+  __html: _.unescape(encodedHtml),
+});
+
 
 class TileComponent extends Component {
 	constructor(props){
 		super(props);
+		this.createMarkup = this.createMarkup.bind(this)
 		// this.showImages = this.showImages.bind(this)
 		{}
 	}
@@ -19,9 +25,12 @@ class TileComponent extends Component {
 		imagesProp: []
 	}
 
+	createMarkup() {
+  	return {__html: 'First &middot; Second'};
+	}
 
 	render(){
-
+		const displayDate = moment(this.props.dateProp).format('ddd, DD-MMM-YYYY')
 		return(
 				<div className = "tileComponentProject">
 					<div className ="row">
@@ -30,7 +39,7 @@ class TileComponent extends Component {
 								
 						</div>
 						<div className = "col s4 m4 l4 dateStamp">
-							{this.props.dateProp.split("T")[0]} 
+							{displayDate} 
 						</div>
 
 					</div>
@@ -41,9 +50,7 @@ class TileComponent extends Component {
                  		 		<div className="imageContainer"><img src={image}/></div>
 	                	  </li>
                			)})}
-						<div>
-							{this.props.tagsProp}
-
+						<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.tagsProp)} >
 						</div>
 
 				</div>

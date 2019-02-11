@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import TileComponent from './TileComponent';
-
+import moment from 'moment';
 
 
 class ProjectListComponent extends Component{ 
@@ -12,7 +12,7 @@ class ProjectListComponent extends Component{
       childShowAdmin:false,
 
     sortedprojects: this.props.projects.sort((a,b) => {
-      return new Date(a.dateStamp).getTime() > new Date(b.dateStamp).getTime()
+      return moment(a.dateStamp).isBefore(moment(b.dateStamp))
     })
    })
 
@@ -31,7 +31,11 @@ class ProjectListComponent extends Component{
           this.props.projects &&
             this.props.projects.length > 0 ?
             (
-              this.props.projects.map(project => {
+              this.props.projects
+              .sort((a,b) => {
+                return moment(a.dateStamp).isAfter(moment(b.dateStamp)) ? -1 : 1;
+              })
+              .map(project => {
                 return(
                       <li key={project._id} className="project_li"> 
                            {/* { console.log("project list body input::", project.images)} */}
