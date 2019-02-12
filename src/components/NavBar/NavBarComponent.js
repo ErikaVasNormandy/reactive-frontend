@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {styles} from './navbar.css';
 
-import HomeComponent from '../home/HomeComponent'
-import ProjectsComponent from '../projects/ProjectsComponent'
-import ArtworkComponent from '../artwork/ArtworkComponent'
-import WorldBuildingComponent from '../worldbuilding/WorldBuildingComponent'
-import AboutComponent from '../about/AboutComponent'
+import HomeComponent from '../tab_home/HomeComponent'
+import ProjectsComponent from '../tab_projects/ProjectsComponent'
+import ArtworkComponent from '../tab_artwork/ArtworkComponent'
+import WorldBuildingComponent from '../tab_worldbuilding/WorldBuildingComponent'
+import AboutComponent from '../tab_about/AboutComponent'
 
 import WindowComponent from '../WindowComponent/WindowComponent'
 import BusinessCardComponent from '../BusinessCardComponent/BusinessCardComponent'
