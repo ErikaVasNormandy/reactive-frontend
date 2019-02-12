@@ -7,10 +7,9 @@ var imageArray= [
       "https://s3-us-west-1.amazonaws.com/scavengers-repo.com/images/WinterMoodBoard/gHQr2Tr.jpg",
       "https://i.redd.it/dwsod4t24n921.jpg",
       "https://i.redd.it/7oah0nilwhp11.jpg",
-      "https://lettherebemovies.files.wordpress.com/2015/02/the-secret-of-kells-008.jpg?w=627&h=353",
+
       "https://preview.redd.it/chnpav915zf21.jpg?width=640&crop=smart&auto=webp&s=c3f839233b82303af62a6e0923a8a1ad20496698",
-      "http://i.imgur.com/fRxjTq9.jpg",
-      "https://images7.alphacoders.com/735/thumb-1920-735799.png",
+      // "https://images7.alphacoders.com/735/thumb-1920-735799.png",
       "https://wallpapercave.com/wp/wp2682163.png",
       "https://images2.alphacoders.com/735/thumb-1920-735771.png",
       "https://images8.alphacoders.com/625/thumb-1920-625703.jpg",
@@ -65,11 +64,19 @@ class WindowComponent extends Component {
 
 
     	return (
+
+    		<div>
       		<div className = "window" style={this.setSectionStyle()}>
 
                     <h1>{this.state.time}</h1>
+                    <br/>
+ 					{/* <span className="windowText">{this.shuffleArray()}</span> */}
 
       		</div>
+
+
+      		</div>
+
     	);
   }
 }

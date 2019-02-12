@@ -32,7 +32,6 @@ class ContainerComponent extends Component {
   }
 
   getContents = () => {
-    // console.log(`${process.env.REACT_APP_PW}`)
     axios.get('/api/contents')
       .then(res => {
         if(res.data){

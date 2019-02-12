@@ -23,5 +23,8 @@
 }
 
 .windowText{
-
+	display: table-cell;
+	padding-top: 500px;
+	font-size: 10px;
+	float: right;
 }
