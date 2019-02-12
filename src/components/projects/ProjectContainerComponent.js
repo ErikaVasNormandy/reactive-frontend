@@ -73,14 +73,16 @@ class ProjectContainerComponent extends Component {
     return(
       <div>
       {/* Ping the mlab server and get the contents back*/}
-        { this.getProjects()}
+            { this.getProjects()}
 
 
-         {this.state.showAdminPanel ? <ProjectInputComponent getProjects={this.getProjects}/> : null }
+            {this.state.showAdminPanel ? <ProjectInputComponent getProjects={this.getProjects}/> : null }
  
-        <button className="blue-grey lighten-4 adminBtn material-icons waves-effect waves-light btn " onClick={this.toggleAdminItem} value="showAdmin">palette</button>
-        {/* Render out the contents via a list */}
-        <ProjectListComponent projects={projects} deleteProject={this.deleteProject} isVisible={this.state.showAdminPanel}/>
+            <button className="blue-grey lighten-4 adminBtn material-icons waves-effect waves-light btn " onClick={this.toggleAdminItem} value="showAdmin">palette</button>
+
+            {/* Render out the contents via a list */}
+            <br/>
+            <ProjectListComponent projects={projects} deleteProject={this.deleteProject} isVisible={this.state.showAdminPanel}/>
       </div>
     )
   }
