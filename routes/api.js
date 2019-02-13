@@ -1,9 +1,12 @@
 const express = require ('express');
 const router = express.Router();
+
+
 const Content = require('../models/content');
 
 const Project = require('../models/content_project')
 
+const WorldBuilding = require('../models/content_worldbuilding')
 
 router.get('/contents', (req, res, next) => {
 	
@@ -65,6 +68,37 @@ router.delete('/projects/:id', (req, res, next) => {
     .catch(next)
 
 })
+
+
+router.get('/worldbuildings', (req, res, next) => {
+  
+  WorldBuilding.find({})
+  .then(data => res.json(data))
+    .catch(next)
+});
+
+
+router.post('/worldbuildings', (req, res, next) => {
+  if(req.body){
+      WorldBuilding.create(req.body)
+       .then(data => res.json(data))
+        .catch(next)
+    } 
+    else {
+    res.json({
+      error: "The input field is empty"
+    })
+  }
+});
+
+router.delete('/worldbuildings/:id', (req, res, next) => {
+   WorldBuilding.findOneAndDelete({"_id": req.params.id})
+    .then(data => res.json(data))
+    .catch(next)
+
+})
+
+
 
 
 module.exports = router;

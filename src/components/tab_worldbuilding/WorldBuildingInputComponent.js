@@ -53,7 +53,7 @@ class WorldBuildingInputComponent extends Component {
 
   	 if(task.title && task.title.length > 0){
   	 //// Submit
-      axios.post('/api/worldbuilding', task)
+      axios.post('/api/worldbuildings', task)
         .then(res => {
         	console.log(task)
 
@@ -106,7 +106,7 @@ class WorldBuildingInputComponent extends Component {
           <textarea placeholder="What'll you say?" className="materialize-textarea" onChange={this.handleBodyChange} value={this.state.bodyInput}/>
           <input type="text" placeholder="Paste Image URL's Here " onChange={this.handleImageChange} value={this.state.images}/>
           <span><h6>Todays Date: {this.state.dateStamp}</h6></span>
-          <button onClick={this.addWorldBuilding}className="btn waves-effect waves-light color: blue-grey darken-2" >WorldBuilding</button>
+          <button onClick={this.addWorldBuilding} className="btn waves-effect waves-light color: blue-grey darken-2" >WorldBuilding</button>
         </div>
       </div>
     )

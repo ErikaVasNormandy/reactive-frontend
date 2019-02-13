@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const routes = require('./routes/api');
-const routesproject = require('./routes/api_project');
 
 
 const path = require('path');
@@ -33,7 +32,8 @@ app.use(bodyParser.json());
 
 app.use('/api', routes);
 
-app.use('/api_project', routesproject)
+
+
 
 
 app.use((err, req, res, next) => {

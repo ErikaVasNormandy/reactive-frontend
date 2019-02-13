@@ -32,7 +32,7 @@ class WorldBuildingContainerComponent extends Component {
   }
 
   getProjects = () => {
-    axios.get('/api/contents')
+    axios.get('/api/worldbuildings')
       .then(res => {
         if(res.data){
           this.setState({
@@ -45,7 +45,7 @@ class WorldBuildingContainerComponent extends Component {
   }
 
   deleteProject = (id) => {
-    axios.delete(`/api/contents/${id}`)
+    axios.delete(`/api/worldbuildings/${id}`)
       .then(res => {
         if(res.data){
           this.getProjects()

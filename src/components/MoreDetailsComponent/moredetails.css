@@ -9,10 +9,6 @@
  	overflow: hidden;
  	background-color: rgba(17,17,17,0.92);
 
-   /* top:10px;
-    left:10px;
-    right: 10px;
-    bottom: 10px;*/
 
  	height: 100vh;
  	width: 100vw;
@@ -20,11 +16,21 @@
 }
 
 .vignettePage{
-	background-color: blue;
-	width: 50%;
-	height: 50%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 200px;
-	margin-bottom: auto;
+	background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/8bdec6bc-0ef4-4d9c-bf67-5fdaaea0b446/d495tan-f2441396-4045-4755-96c4-f40421209691.png/v1/fill/w_900,h_1200,strp/old_paper_stock_03_by_ftourini_d495tan-fullview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+
+    
+
+
+    width: 80%;
+    min-height: 100%;
+    overflow-y: scroll;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: auto;
+    padding: 200px 200px 200px 200px;
 }
