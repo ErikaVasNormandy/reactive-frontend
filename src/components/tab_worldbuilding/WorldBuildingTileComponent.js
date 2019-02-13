@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import moment from 'moment';
 
+import MoreDetailsComponent from '../MoreDetailsComponent/MoreDetailsComponent'
 
 const createMarkup = encodedHtml => ({
   __html: _.unescape(encodedHtml),
@@ -11,7 +12,10 @@ const createMarkup = encodedHtml => ({
 class WorldBuildingTileComponent extends Component {
 	constructor(props){
 		super(props);
-
+		this.handleClickedTile = this.handleClickedTile.bind(this)
+		this.setState({
+			booleanForIsVisible: false
+		})
 	}
 	state = {
 		action: "",
@@ -21,6 +25,14 @@ class WorldBuildingTileComponent extends Component {
 		imagesProp: []
 	}
 
+	handleClickedTile(){
+		console.log(this.state.booleanForIsVisible)
+		this.setState({
+			booleanForIsVisible: !this.state.booleanForIsVisible
+		})
+
+
+	}
 
 	createMarkup() {
   	return {__html: 'First &middot; Second'};
@@ -29,7 +41,9 @@ class WorldBuildingTileComponent extends Component {
 	render(){
 		const displayDate = moment(this.props.dateProp).format('ddd, DD-MMM-YYYY')
 		return(
-				<div className = "tileComponentWorldBuilding">
+				<div className = "tileComponentWorldBuilding" onClick= {this.handleClickedTile}>
+				   {this.state.booleanForIsVisible ? <MoreDetailsComponent details = {this.props.bodyProp}/> : null }
+
 					<div className ="row">
 						<div className = "col s8 m8 l8">
 							<h5>{this.props.titleProp}  </h5>
@@ -38,7 +52,6 @@ class WorldBuildingTileComponent extends Component {
 						<div className = "col s4 m4 l4 dateStamp">
 							{displayDate} 
 						</div>
-
 					</div>
 						
 					{this.props.imagesProp.map(image => {
