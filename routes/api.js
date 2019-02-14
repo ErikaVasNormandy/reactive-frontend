@@ -8,13 +8,18 @@ const Project = require('../models/content_project')
 
 const WorldBuilding = require('../models/content_worldbuilding')
 
+const Artwork = require('../models/content_worldbuilding')
+
+////////////////////////////////////////////////////////////////
+///////////////////// Home Posts
+////////////////////////////////////////////////////////////////
+
 router.get('/contents', (req, res, next) => {
 	
 	Content.find({})
 	.then(data => res.json(data))
     .catch(next)
 });
-
 
 router.post('/contents', (req, res, next) => {
 	if(req.body){
@@ -37,9 +42,9 @@ router.delete('/contents/:id', (req, res, next) => {
 })
 
 
-
-
-
+////////////////////////////////////////////////////////////////
+///////////////////// Project Posts
+////////////////////////////////////////////////////////////////
 
 router.get('/projects', (req, res, next) => {
   
@@ -70,14 +75,16 @@ router.delete('/projects/:id', (req, res, next) => {
 })
 
 
+////////////////////////////////////////////////////////////////
+///////////////////// Worldbuilding Posts
+////////////////////////////////////////////////////////////////
+
 router.get('/worldbuildings', (req, res, next) => {
   
   WorldBuilding.find({})
   .then(data => res.json(data))
     .catch(next)
 });
-
-
 
 
 router.post('/worldbuildings', (req, res, next) => {
@@ -100,6 +107,36 @@ router.delete('/worldbuildings/:id', (req, res, next) => {
 
 })
 
+////////////////////////////////////////////////////////////////
+///////////////////// Artwork Posts
+////////////////////////////////////////////////////////////////
+
+router.get('/artworks', (req, res, next) => {
+	
+	Artwork.find({})
+	.then(data => res.json(data))
+    .catch(next)
+});
+
+router.post('/artworks', (req, res, next) => {
+	if(req.body){
+    	Artwork.create(req.body)
+     	 .then(data => res.json(data))
+      	.catch(next)
+  	} 
+  	else {
+    res.json({
+      error: "The input field is empty"
+    })
+  }
+});
+
+router.delete('/artworks/:id', (req, res, next) => {
+	 Artwork.findOneAndDelete({"_id": req.params.id})
+    .then(data => res.json(data))
+    .catch(next)
+
+})
 
 
 
