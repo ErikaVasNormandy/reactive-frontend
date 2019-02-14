@@ -44,7 +44,7 @@ class WorldBuildingContainerComponent extends Component {
       .catch(err => console.log(err))
   }
 
-  deleteProject = (id) => {
+  deleteWorldBuilding = (id) => {
     axios.delete(`/api/worldbuildings/${id}`)
       .then(res => {
         if(res.data){
