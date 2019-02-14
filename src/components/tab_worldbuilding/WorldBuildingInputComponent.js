@@ -36,32 +36,28 @@ class WorldBuildingInputComponent extends Component {
                  images: []
   }
 
-  addWorldBuilding = () =>{
-    this.setState({
-        dateStamp: todayString
-    })
-
-  	const task = {  
+addWorldBuilding = () =>{
+    const task = {  
             action: this.state.title, 
-  					title: this.state.title,
-  					dateStamp: todayString,
-  					tags: this.state.bodyInput,
-  					images: this.state.images
-  				}
+            title: this.state.title,
+            dateStamp: this.state.dateStamp,
+            body: this.state.bodyInput,
+            images: this.state.images
+          }
 
-  	console.log("TASK         ", task)
+    console.log(task)
 
-  	 if(task.title && task.title.length > 0){
-  	 //// Submit
+    if(task.action && task.action.length > 0){
+     //// Submit
       axios.post('/api/worldbuildings', task)
         .then(res => {
-        	console.log(task)
+          console.log(task)
 
           if(res.data){
-          	/// Defined in ContainerComponent.js
-            this.props.getWorldBuilding();
-          	/// Reset
-            this.setState({action: "", dateStamp: todayString, bodyInput: "", tags: "", title: "", images: []})
+            /// Defined in ContainerComponent.js
+            this.props.getContents();
+            /// Reset
+            this.setState({action: "", dateStamp: Date(), bodyInput: "", title: "", images: []})
           }
         })
         .catch(err => console.log(err))
@@ -106,7 +102,7 @@ class WorldBuildingInputComponent extends Component {
           <textarea placeholder="What'll you say?" className="materialize-textarea" onChange={this.handleBodyChange} value={this.state.bodyInput}/>
           <input type="text" placeholder="Paste Image URL's Here " onChange={this.handleImageChange} value={this.state.images}/>
           <span><h6>Todays Date: {this.state.dateStamp}</h6></span>
-          <button onClick={this.addWorldBuilding} className="btn waves-effect waves-light color: blue-grey darken-2" >WorldBuilding</button>
+          <button onClick={this.addWorldBuilding} className="btn waves-effect waves-light color: blue-grey darken-2" > Posted </button>
         </div>
       </div>
     )

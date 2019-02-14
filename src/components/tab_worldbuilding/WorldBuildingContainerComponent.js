@@ -24,19 +24,19 @@ class WorldBuildingContainerComponent extends Component {
   }
 
   state = {
-    projects: []
+    worldbuildings: []
   }
 
   componentDidMount(){
-    this.getProjects();
+    this.getWorldBuildings();
   }
 
-  getProjects = () => {
+  getWorldBuildings = () => {
     axios.get('/api/worldbuildings')
       .then(res => {
         if(res.data){
           this.setState({
-            projects: res.data
+            worldbuildings: res.data
           })
 
         }
@@ -48,7 +48,7 @@ class WorldBuildingContainerComponent extends Component {
     axios.delete(`/api/worldbuildings/${id}`)
       .then(res => {
         if(res.data){
-          this.getProjects()
+          this.getWorldBuildings()
         }
       })
       .catch(err => console.log(err))
@@ -68,12 +68,12 @@ class WorldBuildingContainerComponent extends Component {
 
   render() {
     {/* What is this for? */}
-    let { projects } = this.state;
+    let { worldbuildings } = this.state;
 
     return(
       <div>
       {/* Ping the mlab server and get the contents back*/}
-            { this.getProjects()}
+            { this.getWorldBuildings()}
 
 
             {this.state.showAdminPanel ? <WorldBuildingInputComponent getWorldBuildings={this.getWorldBuildings}/> : null }
@@ -82,7 +82,7 @@ class WorldBuildingContainerComponent extends Component {
 
             {/* Render out the contents via a list */}
             <br/>
-            <WorldBuildingListComponent worldbuildings={projects} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
+            <WorldBuildingListComponent worldbuildings={worldbuildings} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
       </div>
     )
   }
