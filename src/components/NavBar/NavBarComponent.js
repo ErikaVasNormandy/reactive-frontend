@@ -43,20 +43,22 @@ class NavBarComponent extends Component {
         <hr/>
 
         <div className="row">
+        
           <div className="col s2 m2 l2">
             <BusinessCardComponent/>
-            </div>
+          </div>
+
           <div className="col s10 m10 l0">
-           <Switch>
-	    <div className="displayWindow">
-      		   <Route exact path="/" component={HomeComponent} />
-        	   <Route exact path="/projects" component={ProjectsComponent} />
-        	   <Route exact path="/artwork" component={ArtworkComponent} />
-        	   <Route exact path="/worldbuilding" component={WorldBuildingComponent} />
-        	   <Route exact path="/about" component={AboutComponent} />
-            </div>
-           </Switch>
-      	 </div>
+            <Switch>
+	             <div className="displayWindow">
+      		        <Route exact path="/" component={HomeComponent} />
+        	         <Route exact path="/projects" component={ProjectsComponent} />
+        	         <Route exact path="/artwork" component={ArtworkComponent} />
+        	         <Route exact path="/worldbuilding" component={WorldBuildingComponent} />
+        	         <Route exact path="/about" component={AboutComponent} />
+               </div>
+            </Switch>
+      	   </div>
          </div>
 
         </div>

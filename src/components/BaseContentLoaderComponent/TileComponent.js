@@ -31,6 +31,8 @@ class TileComponent extends Component {
 
 		return(
 				<div className = "tileComponent">
+ 
+                {/* Top Part of the "Photo" */}
 					<div className ="row">
 						<div className = "col s8 m8 l8">
 							<h5>{this.props.titleProp}</h5>
@@ -42,12 +44,17 @@ class TileComponent extends Component {
 						</div>
 					</div>
 						
+
+
+                {/* Display the images by applying a 'map' */}
+                <ul>
 					{this.props.imagesProp.map(image => {
                		 	return(
                  		 	<li key={image}> 
-                 		 		<div className="baseImageContainer"><img src={image}/></div>
-	                	  </li>
+                 		 		<div className="baseImageContainer"><img src={image} alt="Huh, looks like the image moved"/></div>
+	                	  	</li>
                			)})}
+				</ul>
  					<p>{this.props.bodyProp}</p>
 
 				</div>

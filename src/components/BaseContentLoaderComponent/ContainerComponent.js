@@ -6,6 +6,7 @@ import ListComponent from './ContentListComponent';
 import TileComponent from './TileComponent';
 
 import sharedStyles from '../../App.css'
+import styles from './basecontent.css'
 
 require('dotenv').config();
 

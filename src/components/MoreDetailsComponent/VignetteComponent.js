@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import moment from 'moment';
 import {styles} from './moredetails.css';
 
+
+const createMarkup = encodedHtml => ({
+  __html: _.unescape(encodedHtml),
+});
 
 class VignetteComponent extends Component {
 	constructor(props){
 		super(props)
 	}
 
-
 	render(){
 		return(
 			<div className="vignettePage">
-				{this.props.vignettedetails}
+				<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.vignettedetails)} ></div>
 
 
 

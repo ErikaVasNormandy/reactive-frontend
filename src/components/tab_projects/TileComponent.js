@@ -9,10 +9,7 @@ const createMarkup = encodedHtml => ({
 
 
 class TileComponent extends Component {
-	constructor(props){
-		super(props);
 
-	}
 
 	state = {
 		action: "",
@@ -40,15 +37,16 @@ class TileComponent extends Component {
 						</div>
 
 					</div>
-						
+					<ul>
 					{this.props.imagesProp.map(image => {
                		 	return(
                  		 	<li key={image}> 
                  		 		<div className="imageContainer"><img src={image}/></div>
 	                	  </li>
                			)})}
-						<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.tagsProp)} >
-						</div>
+						<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.tagsProp)} />
+					</ul>
+
 
 				</div>
 
