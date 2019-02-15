@@ -8,7 +8,7 @@ const Project = require('../models/content_project')
 
 const WorldBuilding = require('../models/content_worldbuilding')
 
-const Artwork = require('../models/content_worldbuilding')
+const Artwork = require('../models/content_artwork')
 
 ////////////////////////////////////////////////////////////////
 ///////////////////// Home Posts

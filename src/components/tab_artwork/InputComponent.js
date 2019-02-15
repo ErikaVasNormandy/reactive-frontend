@@ -33,7 +33,7 @@ class InputComponent extends Component {
 
   	if(task.action && task.action.length > 0){
   	 //// Submit
-      axios.post('/api/contents', task)
+      axios.post('/api/artworks', task)
         .then(res => {
         	console.log(task)
 
