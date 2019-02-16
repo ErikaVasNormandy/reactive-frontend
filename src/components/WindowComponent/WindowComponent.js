@@ -49,8 +49,8 @@ class WindowComponent extends Component {
     }
 
     setSectionStyle(){
-      const backgroundimagechanged ={
-      backgroundImage:`url(${this.shuffleArray()})`
+        const backgroundimagechanged ={
+        backgroundImage:`url(${this.shuffleArray()})`
     }
       return backgroundimagechanged
 
@@ -68,8 +68,8 @@ class WindowComponent extends Component {
 
     		<div>
       		<div className = "window" style={this.setSectionStyle()}>
-
-                    <h1>{this.state.time}</h1>
+                    <h1 className="windowDisplay windowText">Scavenger's Repo</h1>
+                    <h5 className="windowDisplay">{this.state.time}</h5>
                     <br/>
  					{/* <span className="windowText">{this.shuffleArray()}</span> */}
 

@@ -13,18 +13,17 @@
 
 }
 
-.window h1{
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-	text-shadow: 2px 2px #000000;
-	font-family: Palatino, "Palatino Linotype"
+.window h1,h2,h3,h4,h5,h6{
 
 }
 
+.windowDisplay{
+	/*display: table-cell;*/
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+    font-family: Palatino, "Palatino Linotype";
+}
 .windowText{
-	display: table-cell;
-	padding-top: 500px;
-	font-size: 10px;
-	float: right;
+	padding-top: 200px;
 }
