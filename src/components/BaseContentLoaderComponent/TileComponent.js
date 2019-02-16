@@ -55,7 +55,7 @@ class TileComponent extends Component {
 	                	  	</li>
                			)})}
 				</ul>
- 					<p>{this.props.bodyProp}</p>
+ 					<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.bodyProp)} />
 
 				</div>
 

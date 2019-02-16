@@ -38,8 +38,10 @@ class WorldBuildingTileComponent extends Component {
 	}
 
 	render(){
+	
 		const displayDate = moment(this.props.dateProp).format('ddd, DD-MMM-YYYY')
 		return(
+
 				<div className = "tileComponentWorldBuilding" onClick= {this.handleClickedTile}>
 				   {this.state.booleanForIsVisible ? <MoreDetailsComponent details = {this.props.bodyProp}/> : null }
 
@@ -52,16 +54,16 @@ class WorldBuildingTileComponent extends Component {
 							{displayDate} 
 						</div>
 					</div>
-						
+					<ul>
 					{this.props.imagesProp.map(image => {
                		 	return(
                  		 	<li key={image}> 
                  		 		<div className="imageContainer"><img src={image}/></div>
-	                	  </li>
+	                	  	</li>
                			)})}
 						<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.bodyProp)} >
 						</div>
-
+					</ul>
 				</div>
 
 
