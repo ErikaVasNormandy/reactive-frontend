@@ -30,9 +30,8 @@ class WorldBuildingTileComponent extends Component {
 		this.setState({
 			booleanForIsVisible: !this.state.booleanForIsVisible
 		})
-
-
 	}
+	
 
 	createMarkup() {
   	return {__html: 'First &middot; Second'};
