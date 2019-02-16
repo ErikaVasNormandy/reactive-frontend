@@ -59,6 +59,7 @@ class TileComponent extends Component {
                		 	return(
                  		 	<li key={image}> 
                  		 		<div className="imageContainer"><img src={image}/></div>
+
 	                	  </li>
                			)})}
 						<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.tagsProp)} />

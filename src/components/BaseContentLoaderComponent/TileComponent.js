@@ -52,6 +52,7 @@ class TileComponent extends Component {
                		 	return(
                  		 	<li key={image}> 
                  		 		<div className="baseImageContainer"><img src={image} alt="Huh, looks like the image moved"/></div>
+	                	  		
 	                	  	</li>
                			)})}
 				</ul>
