@@ -51,7 +51,7 @@ class WorldBuildingListComponent extends Component{
                       </li>
                        )   
                 })
-            ): ( <li>Loading Projects...</li>)
+            ): ( <li>Loading Materials</li>)
         }
       </ul>
       </div>

@@ -71,11 +71,6 @@ class WorldBuildingContainerComponent extends Component {
     {/* What is this for? */}
     let { worldbuildings } = this.state;
 
-    const filterWorldBuildings = worldbuildings.filter(item => {
-
-      return item.title.includes('a');
-    })
-
 
     const SettingFilter = worldbuildings.filter(item => {
 
@@ -83,9 +78,31 @@ class WorldBuildingContainerComponent extends Component {
     })
 
 
+
     const AtomcraftFilter = worldbuildings.filter(item => {
 
-      return item.title.includes('a');
+      return item.subject.includes('Atomcraft');
+    })
+
+    const EnvironmentFilter = worldbuildings.filter(item => {
+
+      return item.subject.includes('env');
+    })
+
+    const PoliticsFilter = worldbuildings.filter(item => {
+
+      return item.subject.includes('politics');
+    })
+
+    const CharactersFilter = worldbuildings.filter(item => {
+
+      return item.subject.includes('characters');
+    })
+
+
+    const PlotFilter = worldbuildings.filter(item => {
+
+      return item.subject.includes('plot');
     })
 
     return(
@@ -101,18 +118,40 @@ class WorldBuildingContainerComponent extends Component {
 
               <ul className = "worldbuildinglist">
                 <li>Setting</li>
-
-
                 <li>Atomcraft</li>
-                <li>Background</li>
+                <li>Environment</li>
+                <li>Politics</li>
                 <li>Characters</li>
-                <li>Plot?</li>
+                <li>Plot</li>
+                <li></li>
             </ul>
 
             {/* Render out the contents via a list */}
             <br/>
 
+
+            <h4>Setting</h4>
             <WorldBuildingListComponent worldbuildings={SettingFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
+
+            <h4>Atomcraft</h4>
+            <WorldBuildingListComponent worldbuildings={AtomcraftFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
+     
+            <h4>Environment</h4>
+            <WorldBuildingListComponent worldbuildings={EnvironmentFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
+     
+            <h4>Politics</h4>
+            <WorldBuildingListComponent worldbuildings={PoliticsFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
+
+            <h4>Characters</h4>
+            <WorldBuildingListComponent worldbuildings={CharactersFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
+     
+            <h4>Plot</h4>
+            <WorldBuildingListComponent worldbuildings={PlotFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
+     
+
+
+
+
       </div>
     )
   }
