@@ -20,6 +20,10 @@ const WorldBuildingSchema = new Schema({
 		type: String, 
 		required: [true, "the field is required"]
 	},
+	subject: {
+		type: String, 
+		required: [true, "the field is required"]
+	},
 	images: Array,
 	comments: Array
 	

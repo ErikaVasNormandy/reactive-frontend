@@ -33,7 +33,8 @@ class WorldBuildingInputComponent extends Component {
                  title: "",
                  bodyInput: "",
                  dateStamp: todayString,
-                 images: []
+                 images: [], 
+                 subject: ""
   }
 
 addWorldBuilding = () =>{
@@ -42,7 +43,8 @@ addWorldBuilding = () =>{
             title: this.state.title,
             dateStamp: this.state.dateStamp,
             body: this.state.bodyInput,
-            images: this.state.images
+            images: this.state.images, 
+            subject: this.state.subject
           }
 
     console.log(task)
@@ -57,7 +59,7 @@ addWorldBuilding = () =>{
             /// Defined in ContainerComponent.js
             this.props.getContents();
             /// Reset
-            this.setState({action: "", dateStamp: Date(), bodyInput: "", title: "", images: []})
+            this.setState({action: "", dateStamp: Date(), bodyInput: "", title: "", images: [], subject: ""})
           }
         })
         .catch(err => console.log(err))
@@ -93,13 +95,22 @@ addWorldBuilding = () =>{
     })
   }
 
+  handleSubjectChange = (event) =>{
+    this.setState({
+      subject: event.target.value
+    })
+  }
+
  render() {
     let { action } = this.state;
     return (
       <div className=" newPost ">
         <div className="input-field ">
-          <input placeholder="TITLE"  type="text" onChange={this.handleTitleChange} value={this.state.title}/>
+          <input placeholder="TITLE"  type="text" onChange={this.handleTitleChange} value={this.state.title}/> 
+          <input type="text" placeholder="Subject" onChange={this.handleSubjectChange} value={this.state.subject}/>
+
           <textarea placeholder="What'll you say?" className="materialize-textarea" onChange={this.handleBodyChange} value={this.state.bodyInput}/>
+
           <input type="text" placeholder="Paste Image URL's Here " onChange={this.handleImageChange} value={this.state.images}/>
           <span><h6>Todays Date: {this.state.dateStamp}</h6></span>
           <button onClick={this.addWorldBuilding} className="btn waves-effect waves-light color: blue-grey darken-2" > Posted </button>

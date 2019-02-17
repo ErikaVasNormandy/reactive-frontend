@@ -3,7 +3,7 @@ import WorldBuildingTileComponent from './WorldBuildingTileComponent';
 import moment from 'moment';
 
 
-class WorldBuildingListComponent extends Component{ 
+class SettingListComponent extends Component{ 
 
 
   constructor(props){
@@ -44,7 +44,6 @@ class WorldBuildingListComponent extends Component{
                           dateProp = {worldbuilding.dateStamp} 
                           bodyProp={worldbuilding.body} 
                           imagesProp = {worldbuilding.images} 
-                          subjectProp = {worldbuilding.subject}
                         ></WorldBuildingTileComponent>
 
                         {this.state.childShowAdmin ? <button onClick={() => this.props.deleteWorldBuilding(worldbuilding._id)}  className="  btn waves-effect waves-light color: blue-grey darken-2" >Delete</button>: null }

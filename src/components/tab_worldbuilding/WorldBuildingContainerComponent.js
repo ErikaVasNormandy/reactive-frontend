@@ -70,6 +70,23 @@ class WorldBuildingContainerComponent extends Component {
     {/* What is this for? */}
     let { worldbuildings } = this.state;
 
+    const filterWorldBuildings = worldbuildings.filter(item => {
+
+      return item.title.includes('a');
+    })
+
+
+    const SettingFilter = worldbuildings.filter(item => {
+
+      return item.title.includes('a');
+    })
+
+
+    const AtomcraftFilter = worldbuildings.filter(item => {
+
+      return item.title.includes('a');
+    })
+
     return(
       <div>
       {/* Ping the mlab server and get the contents back*/}
@@ -80,9 +97,21 @@ class WorldBuildingContainerComponent extends Component {
  
             <button className="blue-grey lighten-4 adminBtn material-icons waves-effect waves-light btn " onClick={this.toggleAdminItem} value="showAdmin">palette</button>
 
+
+              <ul className = "worldbuildinglist">
+                <li>Setting</li>
+
+
+                <li>Atomcraft</li>
+                <li>Background</li>
+                <li>Characters</li>
+                <li>Plot?</li>
+            </ul>
+
             {/* Render out the contents via a list */}
             <br/>
-            <WorldBuildingListComponent worldbuildings={worldbuildings} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
+
+            <WorldBuildingListComponent worldbuildings={filterWorldBuildings} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
       </div>
     )
   }
