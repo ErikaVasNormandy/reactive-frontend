@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import moment from 'moment';
 
+import MetaTags from 'react-meta-tags';
 
 const createMarkup = encodedHtml => ({
   __html: _.unescape(encodedHtml),
@@ -31,6 +32,13 @@ class TileComponent extends Component {
 
 		return(
 				<div className = "tileComponent">
+				<MetaTags>
+					 <title>{this.props.titleProp}</title>
+           	 		<meta name="description" content={this.props.titleProp}/>
+            		<meta property="og:title" content={this.props.titleProp}/>
+            		<meta property="og:image" content={this.props.imagesProp} />
+				</MetaTags>
+
  
                 {/* Top Part of the "Photo" */}
 					<div className ="row">
