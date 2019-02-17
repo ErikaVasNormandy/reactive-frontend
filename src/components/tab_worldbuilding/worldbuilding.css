@@ -1,4 +1,9 @@
 
+.worldbuildinglist {
+  list-style-type: circle !important;
+  margin-left: 50px;
+}
+
 .tileComponentWorldBuilding {
     border-radius: 15px;
     background-color: rgba(10,10,10,0.2); 
@@ -13,6 +18,9 @@
     margin: auto;
     margin-bottom: 1%;
     padding: 1px 1px 1px 1px;
+
+    margin-top: 40px;
+
 }
 
 .tileComponentWorldBuilding h5{

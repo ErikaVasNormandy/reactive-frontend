@@ -6,6 +6,10 @@ import WorldBuildingListComponent from './WorldBuildingListComponent';
 import WorldBuildingTileComponent from './WorldBuildingTileComponent';
 import sharedStyles from '../../App.css'
 
+import { HashRouter, Link, Route } from 'react-router-dom'
+
+
+
 require('dotenv').config();
 
 class WorldBuildingContainerComponent extends Component {
@@ -71,6 +75,7 @@ class WorldBuildingContainerComponent extends Component {
     let { worldbuildings } = this.state;
 
     return(
+      <HashRouter basename="/">
       <div>
       {/* Ping the mlab server and get the contents back*/}
             { this.getWorldBuildings()}
@@ -79,11 +84,26 @@ class WorldBuildingContainerComponent extends Component {
             {this.state.showAdminPanel ? <WorldBuildingInputComponent getWorldBuildings={this.getWorldBuildings}/> : null }
  
             <button className="blue-grey lighten-4 adminBtn material-icons waves-effect waves-light btn " onClick={this.toggleAdminItem} value="showAdmin">palette</button>
+            <ul className = "worldbuildinglist">
+              <li>Setting</li>
+              <li>Atomcraft</li>
+              <li>Background</li>
+              <li>Characters</li>
+              <li>Plot?</li>
+            </ul>
+
+
 
             {/* Render out the contents via a list */}
             <br/>
-            <WorldBuildingListComponent worldbuildings={worldbuildings} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
+            {/*    <Route 
+              path ="/today" 
+              render={() => <WorldBuildingListComponent worldbuildings = {worldbuildings} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel} />}
+              />*/}
+
+            <WorldBuildingListComponent worldbuildings={worldbuildings} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/> 
       </div>
+      </HashRouter>
     )
   }
 }
