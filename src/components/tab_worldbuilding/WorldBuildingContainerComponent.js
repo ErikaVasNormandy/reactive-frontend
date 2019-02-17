@@ -78,7 +78,7 @@ class WorldBuildingContainerComponent extends Component {
 
     const SettingFilter = worldbuildings.filter(item => {
 
-      return item.title.includes('a');
+      return item.body.includes('setting');
     })
 
 
@@ -111,7 +111,7 @@ class WorldBuildingContainerComponent extends Component {
             {/* Render out the contents via a list */}
             <br/>
 
-            <WorldBuildingListComponent worldbuildings={filterWorldBuildings} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
+            <WorldBuildingListComponent worldbuildings={SettingFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
       </div>
     )
   }
