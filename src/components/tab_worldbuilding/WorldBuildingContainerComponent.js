@@ -39,6 +39,7 @@ class WorldBuildingContainerComponent extends Component {
             worldbuildings: res.data
           })
 
+
         }
       })
       .catch(err => console.log(err))
@@ -78,7 +79,7 @@ class WorldBuildingContainerComponent extends Component {
 
     const SettingFilter = worldbuildings.filter(item => {
 
-      return item.body.includes('setting');
+      return item.subject.includes('setting');
     })
 
 

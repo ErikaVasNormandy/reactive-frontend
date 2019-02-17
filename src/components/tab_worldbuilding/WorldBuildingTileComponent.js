@@ -48,7 +48,7 @@ class WorldBuildingTileComponent extends Component {
 					<div className ="row">
 						<div className = "col s8 m8 l8">
 							<h5>{this.props.titleProp}  </h5>
-							<h5>{this.props.subjectProp}</h5>
+							<h5>sunject prop ---> {this.props.subjectProp}</h5>
 						</div>
 						<div className = "col s4 m4 l4 dateStamp">
 							{displayDate} 

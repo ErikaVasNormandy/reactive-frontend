@@ -29,7 +29,11 @@ const WorldBuildingSchema = new Schema({
 	
 
 })
+
 const WorldBuildingModel = mongoose.model('worldbuilding', WorldBuildingSchema);
+
+WorldBuildingModel.update({title: 'Atomcraft Crystals'},{$set : {new_field: "subject"}})
+
 module.exports = WorldBuildingModel;
 
 

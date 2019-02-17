@@ -20,6 +20,7 @@ class WorldBuildingInputComponent extends Component {
 		this.handleImageChange = this.handleImageChange.bind(this);
 		this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
+    this.handleSubjectChange = this.handleSubjectChange.bind(this);
 	}
 
 
