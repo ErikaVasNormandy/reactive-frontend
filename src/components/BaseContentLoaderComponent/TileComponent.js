@@ -3,6 +3,14 @@ import _ from 'lodash';
 import moment from 'moment';
 
 import MetaTags from 'react-meta-tags';
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  RedditShareButton,
+  TumblrShareButton,
+  FacebookIcon,
+} from 'react-share';
+
 
 const createMarkup = encodedHtml => ({
   __html: _.unescape(encodedHtml),
@@ -66,8 +74,10 @@ class TileComponent extends Component {
 				</ul>
  					<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.bodyProp)} />
 
-				</div>
 
+ 					<FacebookShareButton quote="Oh look I posted today" children="Hello?" url= "http://reactive.scavengers-repo.com/" image={this.props.imagesProp}><FacebookIcon/>
+				</FacebookShareButton>
+				</div>
 
 			)
 	}
