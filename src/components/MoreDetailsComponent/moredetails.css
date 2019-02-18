@@ -7,7 +7,7 @@
  	left: 0px;
  	right: 0px;
  	overflow: hidden;
- 	background-color: rgba(17,17,17,0.92);
+ 	background-color: rgba(17,17,17,0.5);
 
 
  	height: 100vh;
@@ -29,7 +29,3 @@
     padding: 200px 200px 200px 200px;
 }
 
-.profilePic{
-    width: 50%;
-    float: right;
-}

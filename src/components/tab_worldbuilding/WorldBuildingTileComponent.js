@@ -46,10 +46,10 @@ class WorldBuildingTileComponent extends Component {
 				   {this.state.booleanForIsVisible ? <MoreDetailsComponent details = {this.props.bodyProp} /> : null }
 
 					<div className ="row">
-						<div className = "col s8 m8 l8">
+						<div className = "col s7 m7 l7">
 							<h5>{this.props.titleProp}  </h5>
 						</div>
-						<div className = "col s4 m4 l4 dateStamp">
+						<div className = "col s5 m5 l5 dateStamp">
 							{displayDate} 
 						</div>
 					</div>
@@ -62,8 +62,6 @@ class WorldBuildingTileComponent extends Component {
                			)})}
             			<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.tldrProp)} ></div>
 
-						<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.bodyProp)} >
-						</div>
 					</ul>
 				</div>
 

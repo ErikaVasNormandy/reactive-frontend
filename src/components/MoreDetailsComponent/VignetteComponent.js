@@ -15,7 +15,7 @@ class VignetteComponent extends Component {
 	render(){
 		return(
 			<div className="vignettePage">
-				<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.vignettedetails)} ></div>
+				<div  dangerouslySetInnerHTML={createMarkup(this.props.vignettedetails)} ></div>
 
 
 
