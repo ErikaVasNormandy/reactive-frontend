@@ -44,7 +44,7 @@ class TileComponent extends Component {
 					<title>{this.props.titleProp}</title>
            	 		<meta name="description" content={this.props.titleProp}/>
             		<meta property="og:title" content="Scavengers' Repo"/>
-            		<meta property="og:image" content={this.props.imagesProp} />
+            		<meta property="og:image" content={this.props.imagesProp[0]} />
 				</MetaTags>
 
  
