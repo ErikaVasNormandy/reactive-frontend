@@ -20,17 +20,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-
-    
-
-
-    width: 80%;
-    min-height: 100%;
+    width: 80%; 
+    height: 95%;
     overflow-y: scroll;
-
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: auto;
+
     padding: 200px 200px 200px 200px;
+}
+
+.profilePic{
+    width: 50%;
+    float: right;
 }

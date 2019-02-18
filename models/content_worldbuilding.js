@@ -9,6 +9,10 @@ const WorldBuildingSchema = new Schema({
 		type: String, 
 		required: [true, "the field is required"]
 	},
+	tldr:{
+		type: String,
+		required: [true, "the field is required"]
+	},
 	action: {
 		type: String, 
 		required: [true, "the field is required"]

@@ -43,12 +43,11 @@ class WorldBuildingTileComponent extends Component {
 		return(
 
 				<div className = "tileComponentWorldBuilding" onClick= {this.handleClickedTile}>
-				   {this.state.booleanForIsVisible ? <MoreDetailsComponent details = {this.props.bodyProp}/> : null }
+				   {this.state.booleanForIsVisible ? <MoreDetailsComponent details = {this.props.bodyProp} /> : null }
 
 					<div className ="row">
 						<div className = "col s8 m8 l8">
 							<h5>{this.props.titleProp}  </h5>
-							<h5>sunject prop ---> {this.props.subjectProp}</h5>
 						</div>
 						<div className = "col s4 m4 l4 dateStamp">
 							{displayDate} 
@@ -61,6 +60,8 @@ class WorldBuildingTileComponent extends Component {
                  		 		<div className="imageContainer"><img src={image}/></div>
 	                	  	</li>
                			)})}
+            			<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.tldrProp)} ></div>
+
 						<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.bodyProp)} >
 						</div>
 					</ul>

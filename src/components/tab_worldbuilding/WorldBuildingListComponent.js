@@ -45,6 +45,7 @@ class WorldBuildingListComponent extends Component{
                           bodyProp={worldbuilding.body} 
                           imagesProp = {worldbuilding.images} 
                           subjectProp = {worldbuilding.subject}
+                          tldrProp = {worldbuilding.tldr}
                         ></WorldBuildingTileComponent>
 
                         {this.state.childShowAdmin ? <button onClick={() => this.props.deleteWorldBuilding(worldbuilding._id)}  className="  btn waves-effect waves-light color: blue-grey darken-2" >Delete</button>: null }

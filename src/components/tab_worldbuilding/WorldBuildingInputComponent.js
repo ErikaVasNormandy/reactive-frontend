@@ -35,7 +35,8 @@ class WorldBuildingInputComponent extends Component {
                  bodyInput: "",
                  dateStamp: todayString,
                  images: [], 
-                 subject: ""
+                 subject: "",
+                 tldr: ""
   }
 
 addWorldBuilding = () =>{
@@ -45,7 +46,8 @@ addWorldBuilding = () =>{
             dateStamp: this.state.dateStamp,
             body: this.state.bodyInput,
             images: this.state.images, 
-            subject: this.state.subject
+            subject: this.state.subject,
+            tldr: this.state.tldr
           }
 
     console.log(task)
@@ -60,7 +62,7 @@ addWorldBuilding = () =>{
             /// Defined in ContainerComponent.js
             this.props.getContents();
             /// Reset
-            this.setState({action: "", dateStamp: Date(), bodyInput: "", title: "", images: [], subject: ""})
+            this.setState({action: "", dateStamp: Date(), bodyInput: "", title: "", images: [], subject: "", tldr: ""})
           }
         })
         .catch(err => console.log(err))
@@ -77,6 +79,12 @@ addWorldBuilding = () =>{
     })
   }
 
+
+  handletldrChange = (event) => {
+    this.setState({
+      tldr: event.target.value
+    })
+  }
 
   handleBodyChange = (event) => {
     this.setState({
@@ -109,6 +117,7 @@ addWorldBuilding = () =>{
         <div className="input-field ">
           <input placeholder="TITLE"  type="text" onChange={this.handleTitleChange} value={this.state.title}/> 
           <input type="text" placeholder="Subject" onChange={this.handleSubjectChange} value={this.state.subject}/>
+          <textarea placeholder="the tldr" className="materialize-textarea" onChange={this.handletldrChange} value={this.state.tldr}/>
 
           <textarea placeholder="What'll you say?" className="materialize-textarea" onChange={this.handleBodyChange} value={this.state.bodyInput}/>
 

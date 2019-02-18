@@ -74,7 +74,7 @@ class WorldBuildingContainerComponent extends Component {
 
     const SettingFilter = worldbuildings.filter(item => {
 
-      return item.subject.includes('setting');
+      return item.subject.includes('Setting');
     })
 
 
@@ -86,23 +86,23 @@ class WorldBuildingContainerComponent extends Component {
 
     const EnvironmentFilter = worldbuildings.filter(item => {
 
-      return item.subject.includes('env');
+      return item.subject.includes('Env');
     })
 
     const PoliticsFilter = worldbuildings.filter(item => {
 
-      return item.subject.includes('politics');
+      return item.subject.includes('Politics');
     })
 
     const CharactersFilter = worldbuildings.filter(item => {
 
-      return item.subject.includes('characters');
+      return item.subject.includes('Characters');
     })
 
 
     const PlotFilter = worldbuildings.filter(item => {
 
-      return item.subject.includes('plot');
+      return item.subject.includes('Plot');
     })
 
     return(
