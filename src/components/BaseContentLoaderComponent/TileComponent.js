@@ -75,7 +75,7 @@ class TileComponent extends Component {
  					<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.bodyProp)} />
 
 
- 					<FacebookShareButton quote="Oh look I posted today" children="Hello?" url= "http://reactive.scavengers-repo.com/" image={this.props.imagesProp}><FacebookIcon/>
+ 					<FacebookShareButton quote="Oh look I posted today" children="Hello?" url= "http://reactive.scavengers-repo.com/" image={this.props.imagesProp} ><FacebookIcon size={32} round={true}/>
 				</FacebookShareButton>
 				</div>
 
