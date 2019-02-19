@@ -10,11 +10,7 @@ class WorldBuildingComponent extends Component {
   render() {
     return (
       <div>
-       <MetaTags>
-            <title>Projects</title>
-            <meta name="description" content="Projects either ongoing, finished, or planned" />
-            <meta property="og:image" content="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/tab-projects/WebPreviewProjects.png" />
-          </MetaTags>
+
 
       	<h2>World Building</h2>
       	<WorldBuildingContainerComponent/>
