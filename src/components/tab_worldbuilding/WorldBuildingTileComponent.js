@@ -46,12 +46,10 @@ class WorldBuildingTileComponent extends Component {
 				   {this.state.booleanForIsVisible ? <MoreDetailsComponent details = {this.props.bodyProp} /> : null }
 
 					<div className ="row">
-						<div className = "col s7 m7 l7">
+						<div className = "col s9 m9 l9">
 							<h5>{this.props.titleProp}  </h5>
 						</div>
-						<div className = "col s5 m5 l5 dateStamp">
-							{displayDate} 
-						</div>
+
 					</div>
 					<ul>
 					{this.props.imagesProp.map(image => {

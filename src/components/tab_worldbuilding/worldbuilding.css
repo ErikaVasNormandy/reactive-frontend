@@ -6,9 +6,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
 
-	  width: 300px;
-	  min-height: 500px;
-    max-height: 500px;
+	  width: 350px;
+	  min-height: 600px;
+    max-height: 600px;
 
     margin: auto;
     margin-bottom: 1%;
@@ -112,7 +112,7 @@ code {
     margin-top: 10px;
 
     overflow-y: scroll;
-    height: 10em;
+    height: 18em;
     font-size: 1em;
 
 }
