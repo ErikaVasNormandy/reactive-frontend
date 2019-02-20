@@ -10,7 +10,7 @@ const WorldBuilding = require('../models/content_worldbuilding')
 
 const Artwork = require('../models/content_artwork')
 
-const CharSheets = require('../models/content_charsheet')
+const CharSheet = require('../models/content_charsheet')
 
 
 ////////////////////////////////////////////////////////////////

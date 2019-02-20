@@ -53,7 +53,7 @@ const CharSheetSchema = new Schema({
 		type: String, 
 		required: [true, "the field is required"]
 	},
-	images: Array
+	images: Array, 
 
 
 })
