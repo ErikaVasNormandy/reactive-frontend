@@ -10,6 +10,9 @@ const WorldBuilding = require('../models/content_worldbuilding')
 
 const Artwork = require('../models/content_artwork')
 
+const CharSheets = require('../models/content_charsheet')
+
+
 ////////////////////////////////////////////////////////////////
 ///////////////////// Home Posts
 ////////////////////////////////////////////////////////////////
@@ -137,6 +140,40 @@ router.delete('/artworks/:id', (req, res, next) => {
     .catch(next)
 
 })
+
+
+
+////////////////////////////////////////////////////////////////
+///////////////////// CharSheet Posts
+////////////////////////////////////////////////////////////////
+
+router.get('/charsheets', (req, res, next) => {
+	
+	CharSheet.find({})
+	.then(data => res.json(data))
+    .catch(next)
+});
+
+router.post('/charsheets', (req, res, next) => {
+	if(req.body){
+    	CharSheet.create(req.body)
+     	 .then(data => res.json(data))
+      	.catch(next)
+  	} 
+  	else {
+    res.json({
+      error: "The input field is empty"
+    })
+  }
+});
+
+router.delete('/charsheets/:id', (req, res, next) => {
+	 CharSheet.findOneAndDelete({"_id": req.params.id})
+    .then(data => res.json(data))
+    .catch(next)
+
+})
+
 
 
 module.exports = router;
