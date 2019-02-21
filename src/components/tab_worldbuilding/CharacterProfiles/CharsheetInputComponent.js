@@ -45,7 +45,7 @@ class CharsheetInputComponent extends Component {
 	
 addCharsheet = () =>{
     const task = {  
-    	CharacterName: this.state.CharacterName,
+      CharacterName: this.state.CharacterName,
 		  PreviewPic: this.state.PreviewPic,
 		  Roles: this.state.Roles,
    		tldr : this.state.tldr,
@@ -53,11 +53,11 @@ addCharsheet = () =>{
     	Alignment: this.state.Alignment,  
     	Gender: this.state.Gender,     
     	Tier: this.state.Tier, 
-		Background : this.state.Background,
-		CurrentStatus: this.tate.CurrentStatus,  
-		images : this.state.images,  
+		  Background : this.state.Background,
+		  CurrentStatus: this.state.CurrentStatus,  
+		  images : this.state.images,  
     }
-
+    console.log("Hello from charsheet!")
 
     if(task.CharacterName && task.CharacterName.length > 0){
      //// Submit
@@ -69,17 +69,17 @@ addCharsheet = () =>{
             this.props.getCharsheets();
             /// Reset
             this.setState({
-    			CharacterName: "",
-				PreviewPic: "",
-				Roles: "",
-   				tldr : "",
-    			priority : "",
-    			Alignment: "",  
-    			Gender: "",     
-    			Tier: "",  
-				Background : "",
-				CurrentStatus: "",  
-				images : []
+              CharacterName: "",
+				      PreviewPic: "",
+				      Roles: "",
+   				    tldr : "",
+    			    priority : "",
+    			    Alignment: "",  
+    			    Gender: "",     
+    			    Tier: "",  
+				      Background : "",
+				      CurrentStatus: "",  
+				      images : []
   				})
           }
         })
@@ -160,7 +160,7 @@ addCharsheet = () =>{
       <div className=" newPost ">
         <div className="input-field ">
           <input type="text" placeholder="NAME"  onChange={this.handleCharacterName} value={this.state.CharacterName}/> 
-          <input type="text" placeholder="PREIVEW PIC" onChange={this.handlePreviewPic} value={this.state.PreviewPic}/>
+          <input type="text" placeholder="PREVIEW PIC" onChange={this.handlePreviewPic} value={this.state.PreviewPic}/>
           <input type="text" placeholder="ROLES" onChange={this.handleRoles} value={this.state.Roles}/>
           <input type="text" placeholder="TLDR" onChange={this.handletldr} value={this.state.tldr}/>
           <input type="text" placeholder="PRIORITY" onChange={this.handlepriority} value={this.state.priority}/>

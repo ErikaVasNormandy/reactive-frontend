@@ -10,7 +10,7 @@ require('dotenv').config();
 class CharsheetContainerComponent extends Component {
   constructor(props){
     super(props)
-
+    this.getCharsheets = this.getCharsheets.bind(this)
     this.toggleAdminItem = this.toggleAdminItem.bind(this);
 
   }
@@ -76,7 +76,7 @@ class CharsheetContainerComponent extends Component {
     return(
       <div>
       {/* Ping the mlab server and get the contents back*/}
-            { this.getCharsheets()}
+            { this.getCharsheets() }
 
 
             {this.state.showAdminPanel ? <CharsheetInputComponent getCharsheets={this.getCharsheets}/> : null }
