@@ -33,12 +33,18 @@ class CharsheetListComponent extends Component{
                            {/* { console.log("project list body input::", project.images)} */}
                             
                         <CharsheetTileComponent 
-                          titleProp= {charsheet.title} 
-                          dateProp = {charsheet.dateStamp} 
-                          bodyProp={charsheet.body} 
-                          imagesProp = {charsheet.images} 
-                          subjectProp = {charsheet.subject}
-                          tldrProp = {charsheet.tldr}
+                          CharacterNameProp= {charsheet.CharacterName} 
+                          PreviewPicProp = {charsheet.PreviewPic} 
+                          RolesProp={charsheet.Roles} 
+                          tldrProp = {charsheet.tldr} 
+                          PriorityProp = {charsheet.Priority}
+                          AgeProp = {charsheet.Age}
+                          AlignmentProp = {charsheet.Alignment}
+                          GenderProp = {charsheet.Gender}
+                          TierProp = {charsheet.TierProp}
+                          BackgroundProp = {charsheet.Background}
+                          CurrentStatusProp = {charsheet.CurrentStatus}
+                          imagesProp = {charsheet.images}  
                         ></CharsheetTileComponent>
 
                         {this.state.childShowAdmin ? <button onClick={() => this.props.deleteCharsheet(charsheet._id)}  className="  btn waves-effect waves-light color: blue-grey darken-2" >Delete</button>: null }

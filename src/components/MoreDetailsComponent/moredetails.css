@@ -29,3 +29,18 @@
     padding: 200px 200px 200px 200px;
 }
 
+
+.profilePic {
+    width: 40%;
+    float: right;
+    margin: 20px 20px 20px 20px;
+    display: table-cell;
+}
+
+.statsDiv{
+    display: table-cell;
+}
+.galleryPic{
+    width: 30%;
+    display: inline;
+}
