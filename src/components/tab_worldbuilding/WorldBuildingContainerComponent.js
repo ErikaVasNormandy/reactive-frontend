@@ -147,6 +147,8 @@ class WorldBuildingContainerComponent extends Component {
             <h4>Characters</h4>
             <WorldBuildingListComponent worldbuildings={CharactersFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
             <CharsheetContainerComponent/>
+            
+
             <h4>Plot</h4>
             <WorldBuildingListComponent worldbuildings={PlotFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
      

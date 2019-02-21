@@ -9,7 +9,7 @@ const createMarkup = encodedHtml => ({
 });
 
 
-class WorldBuildingTileComponent extends Component {
+class CharsheetTileComponent extends Component {
 	constructor(props){
 		super(props);
 		this.handleClickedTile = this.handleClickedTile.bind(this)
@@ -75,4 +75,4 @@ class WorldBuildingTileComponent extends Component {
 
 }
 
-export default WorldBuildingTileComponent
+export default CharsheetTileComponent

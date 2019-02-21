@@ -6,21 +6,16 @@ import sharedStyles from '../../App.css'
 let today = new Date();
 let todayString = today.toLocaleString()
 
-// var moment = require('moment');
-// let today = new Date();
-// let todayString = moment().format("MMM Do, YYYY");
-
-
 class WorldBuildingInputComponent extends Component {
 
 	constructor(props){
 		super(props)
 
-    this.handleBodyChange = this.handleBodyChange.bind(this);
+    	this.handleBodyChange = this.handleBodyChange.bind(this);
 		this.handleImageChange = this.handleImageChange.bind(this);
 		this.handleTitleChange = this.handleTitleChange.bind(this);
-    this.handleDateChange = this.handleDateChange.bind(this);
-    this.handleSubjectChange = this.handleSubjectChange.bind(this);
+    	this.handleDateChange = this.handleDateChange.bind(this);
+    	this.handleSubjectChange = this.handleSubjectChange.bind(this);
 	}
 
 
@@ -123,7 +118,7 @@ addWorldBuilding = () =>{
 
           <input type="text" placeholder="Paste Image URL's Here " onChange={this.handleImageChange} value={this.state.images}/>
           <span><h6>Todays Date: {this.state.dateStamp}</h6></span>
-          <button onClick={this.addWorldBuilding} className="btn waves-effect waves-light color: blue-grey darken-2" > Posted </button>
+          <button onClick={this.addWorldBuilding} className="btn waves-effect waves-light color: blue-grey darken-2" > Post </button>
         </div>
       </div>
     )

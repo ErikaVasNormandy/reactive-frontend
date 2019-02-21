@@ -4,21 +4,23 @@ import axios from 'axios';
 let today = new Date();
 let todayString = today.toLocaleString()
 
-// var moment = require('moment');
-// let today = new Date();
-// let todayString = moment().format("MMM Do, YYYY");
-
 
 class CharsheetInputComponent extends Component {
 
 	constructor(props){
 		super(props)
 
-    this.handleBodyChange = this.handleBodyChange.bind(this);
-		this.handleImageChange = this.handleImageChange.bind(this);
-		this.handleTitleChange = this.handleTitleChange.bind(this);
-    this.handleDateChange = this.handleDateChange.bind(this);
-    this.handleSubjectChange = this.handleSubjectChange.bind(this);
+      this.handleCharacterName = this.handleCharacterName.bind(this);
+	   this.handlePreviewPic =  this.handlePreviewPic.bind(this);
+	   this.handleRoles = this.handleRoles.bind(this);
+      this.handletldr = this.handletldr.bind(this);
+      this.handlepriority = this.handlepriority.bind(this);
+      this.handleAlignment = this.handleAlignment.bind(this);  
+      this.handleGender = this.handleGender.bind(this);     
+      this.handleTier = this.handleTier.bind(this);  
+	     this.handleBackground = this.handleBackground.bind(this);
+	   this.handleCurrentStatus = this.handleCurrentStatus.bind(this);  
+	   this.handleimages = this.handleimages.bind(this);  
 	}
 
 
@@ -28,39 +30,57 @@ class CharsheetInputComponent extends Component {
 
 
   	state = {
-                 action: "",
-                 title: "",
-                 bodyInput: "",
-                 dateStamp: todayString,
-                 images: [], 
-                 subject: "",
-                 tldr: ""
-  }
-
+    	CharacterName: "",
+		  PreviewPic: "",
+		  Roles: "",
+   		tldr : "",
+    	priority : "",
+    	Alignment: "",  
+    	Gender: "",     
+    	Tier: "",  
+		  Background : "",
+		  CurrentStatus: "",  
+		  images : []
+  	}
+	
 addCharsheet = () =>{
     const task = {  
-            action: this.state.title, 
-            title: this.state.title,
-            dateStamp: this.state.dateStamp,
-            body: this.state.bodyInput,
-            images: this.state.images, 
-            subject: this.state.subject,
-            tldr: this.state.tldr
-          }
+    	CharacterName: this.state.CharacterName,
+		  PreviewPic: this.state.PreviewPic,
+		  Roles: this.state.Roles,
+   		tldr : this.state.tldr,
+    	priority : this.state.priority,
+    	Alignment: this.state.Alignment,  
+    	Gender: this.state.Gender,     
+    	Tier: this.state.Tier, 
+		Background : this.state.Background,
+		CurrentStatus: this.tate.CurrentStatus,  
+		images : this.state.images,  
+    }
 
-    console.log(task)
 
-    if(task.action && task.action.length > 0){
+    if(task.CharacterName && task.CharacterName.length > 0){
      //// Submit
       axios.post('/api/charsheets', task)
         .then(res => {
           console.log(task)
-
           if(res.data){
             /// Defined in ContainerComponent.js
-            this.props.getContents();
+            this.props.getCharsheets();
             /// Reset
-            this.setState({action: "", dateStamp: Date(), bodyInput: "", title: "", images: [], subject: "", tldr: ""})
+            this.setState({
+    			CharacterName: "",
+				PreviewPic: "",
+				Roles: "",
+   				tldr : "",
+    			priority : "",
+    			Alignment: "",  
+    			Gender: "",     
+    			Tier: "",  
+				Background : "",
+				CurrentStatus: "",  
+				images : []
+  				})
           }
         })
         .catch(err => console.log(err))
@@ -71,40 +91,66 @@ addCharsheet = () =>{
   }
 
 
-  handleTitleChange = (event) => {
+  handleCharacterName = (event) => {
     this.setState({
-      title: event.target.value
+      CharacterName: event.target.value
     })
   }
 
 
-  handletldrChange = (event) => {
+  handlePreviewPic = (event) => {
     this.setState({
-      tldr: event.target.value
+      PreviewPic: event.target.value
     })
   }
 
-  handleBodyChange = (event) => {
+  handleRoles = (event) => {
     this.setState({
-      bodyInput: event.target.value
+      Roles: event.target.value
     })
   }
 
-   handleImageChange = (event) => {
+   handletldr = (event) => {
   	this.setState({
-  		images: event.target.value
+  		tldr: event.target.value
   	})
   }
 
-  handleDateChange = (event) =>{
+  handlepriority = (event) =>{
     this.setState({
-      dateStamp: event.target.value
+      priority: event.target.value
     })
   }
 
-  handleSubjectChange = (event) =>{
+  handleAlignment = (event) =>{
     this.setState({
-      subject: event.target.value
+      Alignment: event.target.value
+    })
+  }
+  handleGender = (event) =>{
+    this.setState({
+      Gender: event.target.value
+    })
+  }
+  handleTier = (event) =>{
+    this.setState({
+      Tier: event.target.value
+    })
+  }
+  handleBackground = (event) =>{
+    this.setState({
+      Background: event.target.value
+    })
+  }
+  handleCurrentStatus = (event) =>{
+    this.setState({
+      CurrentStatus: event.target.value
+    })
+  }
+  
+  handleimages = (event) =>{
+    this.setState({
+      images: event.target.value
     })
   }
 
@@ -113,15 +159,18 @@ addCharsheet = () =>{
     return (
       <div className=" newPost ">
         <div className="input-field ">
-          <input placeholder="TITLE"  type="text" onChange={this.handleTitleChange} value={this.state.title}/> 
-          <input type="text" placeholder="Subject" onChange={this.handleSubjectChange} value={this.state.subject}/>
-          <textarea placeholder="the tldr" className="materialize-textarea" onChange={this.handletldrChange} value={this.state.tldr}/>
-
-          <textarea placeholder="What'll you say?" className="materialize-textarea" onChange={this.handleBodyChange} value={this.state.bodyInput}/>
-
-          <input type="text" placeholder="Paste Image URL's Here " onChange={this.handleImageChange} value={this.state.images}/>
-          <span><h6>Todays Date: {this.state.dateStamp}</h6></span>
-          <button onClick={this.addWorldBuilding} className="btn waves-effect waves-light color: blue-grey darken-2" > Posted </button>
+          <input type="text" placeholder="NAME"  onChange={this.handleCharacterName} value={this.state.CharacterName}/> 
+          <input type="text" placeholder="PREIVEW PIC" onChange={this.handlePreviewPic} value={this.state.PreviewPic}/>
+          <input type="text" placeholder="ROLES" onChange={this.handleRoles} value={this.state.Roles}/>
+          <input type="text" placeholder="TLDR" onChange={this.handletldr} value={this.state.tldr}/>
+          <input type="text" placeholder="PRIORITY" onChange={this.handlepriority} value={this.state.priority}/>
+          <input type="text" placeholder="ALIGNMENT" onChange={this.handleAlignment} value={this.state.Alignment}/>
+          <input type="text" placeholder="GENDER" onChange={this.handleGender} value={this.state.Gender}/>
+          <input type="text" placeholder="TIER" onChange={this.handleTier} value={this.state.Tier}/>
+          <textarea placeholder="BACKGROUND" className="materialize-textarea" onChange={this.handleBackground} value={this.state.Background}/>
+          <input type="text" placeholder="CURRENT STATUS" onChange={this.handleCurrentStatus} value={this.state.CurrentStatus}/>
+          <input type="text" placeholder="Paste Image URL's Here" onChange={this.handleimages} value={this.state.images}/>
+          <button onClick={this.addCharsheet} className="btn waves-effect waves-light color: blue-grey darken-2" > Post </button>
         </div>
       </div>
     )
