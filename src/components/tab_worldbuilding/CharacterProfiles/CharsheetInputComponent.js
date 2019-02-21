@@ -10,17 +10,18 @@ class CharsheetInputComponent extends Component {
 	constructor(props){
 		super(props)
 
-      this.handleCharacterName = this.handleCharacterName.bind(this);
-	   this.handlePreviewPic =  this.handlePreviewPic.bind(this);
-	   this.handleRoles = this.handleRoles.bind(this);
-      this.handletldr = this.handletldr.bind(this);
-      this.handlePriority = this.handlePriority.bind(this);
-      this.handleAlignment = this.handleAlignment.bind(this);  
-      this.handleGender = this.handleGender.bind(this);     
-      this.handleTier = this.handleTier.bind(this);  
-	     this.handleBackground = this.handleBackground.bind(this);
-	   this.handleCurrentStatus = this.handleCurrentStatus.bind(this);  
-	   this.handleimages = this.handleimages.bind(this);  
+      	this.handleCharacterName = this.handleCharacterName.bind(this);
+	   	this.handlePreviewPic =  this.handlePreviewPic.bind(this);
+	   	this.handleRoles = this.handleRoles.bind(this);
+      	this.handletldr = this.handletldr.bind(this);
+      	this.handlePriority = this.handlePriority.bind(this);
+      	this.handleAlignment = this.handleAlignment.bind(this);  
+     	this.handleGender = this.handleGender.bind(this);     
+     	this.handleAge = this.handleAge.bind(this);     
+     	this.handleTier = this.handleTier.bind(this);  
+	    this.handleBackground = this.handleBackground.bind(this);
+	   	this.handleCurrentStatus = this.handleCurrentStatus.bind(this);  
+	   	this.handleimages = this.handleimages.bind(this);  
 	}
 
 
@@ -31,31 +32,33 @@ class CharsheetInputComponent extends Component {
 
   	state = {
     	CharacterName: "",
-		  PreviewPic: "",
-		  Roles: "",
+		PreviewPic: "",
+		Roles: "",
    		tldr : "",
-    	Priority : "",
+    	Priority : 0,
     	Alignment: "",  
     	Gender: "",     
     	Tier: "",  
-		  Background : "",
-		  CurrentStatus: "",  
-		  images : []
+		Age: 0,
+		Background : "",
+		CurrentStatus: "",  
+		images : []
   	}
 	
 addCharsheet = () =>{
     const task = {  
-      CharacterName: this.state.CharacterName,
-		  PreviewPic: this.state.PreviewPic,
-		  Roles: this.state.Roles,
+    	CharacterName: this.state.CharacterName,
+		PreviewPic: this.state.PreviewPic,
+		Roles: this.state.Roles,
    		tldr : this.state.tldr,
     	Priority : this.state.Priority,
     	Alignment: this.state.Alignment,  
     	Gender: this.state.Gender,     
+    	Age: this.state.Age,
     	Tier: this.state.Tier, 
-		  Background : this.state.Background,
-		  CurrentStatus: this.state.CurrentStatus,  
-		  images : this.state.images
+		Background : this.state.Background,
+		CurrentStatus: this.state.CurrentStatus,  
+		images : this.state.images
     }
     console.log("Hello from charsheet!")
     console.log(task)
@@ -67,21 +70,22 @@ addCharsheet = () =>{
           console.log(task)
           if(res.data){
             /// Defined in ContainerComponent.js
-            this.props.getContents();
+            this.props.getCharsheets();
             /// Reset
             this.setState({
-              CharacterName: "",
-				      PreviewPic: "",
-				      Roles: "",
-   				    tldr : "",
-    			    priority : "",
-    			    Alignment: "",  
-    			    Gender: "",     
-    			    Tier: "",  
-				      Background : "",
-				      CurrentStatus: "",  
-				      images : []
-  				  })
+              	CharacterName: "",
+				PreviewPic: "",
+				Roles: "",
+   				tldr : "",
+    			Priority : 0,
+    			Alignment: "",  
+    			Gender: "",  
+    			Age: 0,  
+    			Tier: "",  
+				Background : "",
+				CurrentStatus: "",  
+				images : []
+  			})
           }
         })
         .catch(err => console.log(err))
@@ -133,6 +137,11 @@ addCharsheet = () =>{
       Gender: event.target.value
     })
   }
+  handleAge = (event) =>{
+    this.setState({
+      Age: event.target.value
+    })
+  }
   handleTier = (event) =>{
     this.setState({
       Tier: event.target.value
@@ -164,6 +173,7 @@ addCharsheet = () =>{
           <input type="text" placeholder="ROLES" onChange={this.handleRoles} value={this.state.Roles}/>
           <input type="text" placeholder="TLDR" onChange={this.handletldr} value={this.state.tldr}/>
           <input type="number" placeholder="PRIORITY" onChange={this.handlePriority} value={this.state.Priority}/>
+          <input type="number" placeholder="AGE" onChange={this.handleAge} value={this.state.Age}/>    
           <input type="text" placeholder="ALIGNMENT" onChange={this.handleAlignment} value={this.state.Alignment}/>
           <input type="text" placeholder="GENDER" onChange={this.handleGender} value={this.state.Gender}/>
           <input type="text" placeholder="TIER" onChange={this.handleTier} value={this.state.Tier}/>
