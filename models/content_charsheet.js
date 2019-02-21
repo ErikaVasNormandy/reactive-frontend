@@ -4,7 +4,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const CharSheetSchema = new Schema({
+const CharsheetSchema = new Schema({
 	CharacterName: {
 		type: String, 
 		required: [true, "the field is required"]
@@ -24,7 +24,7 @@ const CharSheetSchema = new Schema({
 	},
 
 
-	priority: { 
+	Priority: { 
 		type: Number,
 		required: [true,"date is required"]
 
@@ -58,9 +58,9 @@ const CharSheetSchema = new Schema({
 
 })
 
-const CharSheetModel = mongoose.model('charsheet', CharSheetSchema);
+const CharsheetModel = mongoose.model('charsheet', CharsheetSchema);
 
-module.exports = CharSheetModel;
+module.exports = CharsheetModel;
 
 
 

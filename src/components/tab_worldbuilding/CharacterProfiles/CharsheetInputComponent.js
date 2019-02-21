@@ -14,7 +14,7 @@ class CharsheetInputComponent extends Component {
 	   this.handlePreviewPic =  this.handlePreviewPic.bind(this);
 	   this.handleRoles = this.handleRoles.bind(this);
       this.handletldr = this.handletldr.bind(this);
-      this.handlepriority = this.handlepriority.bind(this);
+      this.handlePriority = this.handlePriority.bind(this);
       this.handleAlignment = this.handleAlignment.bind(this);  
       this.handleGender = this.handleGender.bind(this);     
       this.handleTier = this.handleTier.bind(this);  
@@ -34,7 +34,7 @@ class CharsheetInputComponent extends Component {
 		  PreviewPic: "",
 		  Roles: "",
    		tldr : "",
-    	priority : "",
+    	Priority : "",
     	Alignment: "",  
     	Gender: "",     
     	Tier: "",  
@@ -49,7 +49,7 @@ addCharsheet = () =>{
 		  PreviewPic: this.state.PreviewPic,
 		  Roles: this.state.Roles,
    		tldr : this.state.tldr,
-    	priority : this.state.priority,
+    	Priority : this.state.Priority,
     	Alignment: this.state.Alignment,  
     	Gender: this.state.Gender,     
     	Tier: this.state.Tier, 
@@ -60,6 +60,8 @@ addCharsheet = () =>{
     console.log("Hello from charsheet!")
 
     if(task.CharacterName && task.CharacterName.length > 0){
+      console.log("Hello from charsheet IF LOOP!")
+
      //// Submit
       axios.post('/api/charsheets', task)
         .then(res => {
@@ -116,9 +118,9 @@ addCharsheet = () =>{
   	})
   }
 
-  handlepriority = (event) =>{
+  handlePriority = (event) =>{
     this.setState({
-      priority: event.target.value
+      Priority: event.target.value
     })
   }
 
@@ -155,7 +157,6 @@ addCharsheet = () =>{
   }
 
  render() {
-    let { action } = this.state;
     return (
       <div className=" newPost ">
         <div className="input-field ">
@@ -163,7 +164,7 @@ addCharsheet = () =>{
           <input type="text" placeholder="PREVIEW PIC" onChange={this.handlePreviewPic} value={this.state.PreviewPic}/>
           <input type="text" placeholder="ROLES" onChange={this.handleRoles} value={this.state.Roles}/>
           <input type="text" placeholder="TLDR" onChange={this.handletldr} value={this.state.tldr}/>
-          <input type="text" placeholder="PRIORITY" onChange={this.handlepriority} value={this.state.priority}/>
+          <input type="number" placeholder="PRIORITY" onChange={this.handlePriority} value={this.state.Priority}/>
           <input type="text" placeholder="ALIGNMENT" onChange={this.handleAlignment} value={this.state.Alignment}/>
           <input type="text" placeholder="GENDER" onChange={this.handleGender} value={this.state.Gender}/>
           <input type="text" placeholder="TIER" onChange={this.handleTier} value={this.state.Tier}/>

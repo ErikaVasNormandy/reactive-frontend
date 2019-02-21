@@ -10,7 +10,7 @@ const WorldBuilding = require('../models/content_worldbuilding')
 
 const Artwork = require('../models/content_artwork')
 
-const CharSheet = require('../models/content_charsheet')
+const Charsheet = require('../models/content_charsheet')
 
 
 ////////////////////////////////////////////////////////////////
@@ -149,14 +149,14 @@ router.delete('/artworks/:id', (req, res, next) => {
 
 router.get('/charsheets', (req, res, next) => {
 	
-	CharSheet.find({})
+	Charsheet.find({})
 	.then(data => res.json(data))
     .catch(next)
 });
 
 router.post('/charsheets', (req, res, next) => {
 	if(req.body){
-    	CharSheet.create(req.body)
+    	Charsheet.create(req.body)
      	 .then(data => res.json(data))
       	.catch(next)
   	} 
@@ -168,7 +168,7 @@ router.post('/charsheets', (req, res, next) => {
 });
 
 router.delete('/charsheets/:id', (req, res, next) => {
-	 CharSheet.findOneAndDelete({"_id": req.params.id})
+	 Charsheet.findOneAndDelete({"_id": req.params.id})
     .then(data => res.json(data))
     .catch(next)
 

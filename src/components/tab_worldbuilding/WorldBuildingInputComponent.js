@@ -12,8 +12,8 @@ class WorldBuildingInputComponent extends Component {
 		super(props)
 
     	this.handleBodyChange = this.handleBodyChange.bind(this);
-		this.handleImageChange = this.handleImageChange.bind(this);
-		this.handleTitleChange = this.handleTitleChange.bind(this);
+		  this.handleImageChange = this.handleImageChange.bind(this);
+		  this.handleTitleChange = this.handleTitleChange.bind(this);
     	this.handleDateChange = this.handleDateChange.bind(this);
     	this.handleSubjectChange = this.handleSubjectChange.bind(this);
 	}
@@ -34,7 +34,7 @@ class WorldBuildingInputComponent extends Component {
                  tldr: ""
   }
 
-addWorldBuilding = () =>{
+  addWorldBuilding = () =>{
     const task = {  
             action: this.state.title, 
             title: this.state.title,
@@ -55,7 +55,7 @@ addWorldBuilding = () =>{
 
           if(res.data){
             /// Defined in ContainerComponent.js
-            this.props.getContents();
+            this.props.getWorldBuildings();
             /// Reset
             this.setState({action: "", dateStamp: Date(), bodyInput: "", title: "", images: [], subject: "", tldr: ""})
           }
