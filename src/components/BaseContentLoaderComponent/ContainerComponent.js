@@ -3,8 +3,6 @@ import axios from 'axios';
 
 import InputComponent from './InputComponent';
 import ListComponent from './ContentListComponent';
-import TileComponent from './TileComponent';
-
 import sharedStyles from '../../App.css'
 import styles from './basecontent.css'
 
@@ -59,7 +57,7 @@ class ContainerComponent extends Component {
 
   toggleAdminItem(e){
     var auth = window.prompt("Create a New Post: ")
-    if(auth == `${process.env.REACT_APP_PW}`){
+    if(auth === `${process.env.REACT_APP_PW}`){
     this.setState({ 
       showAdminPanel: !this.state.showAdminPanel 
     });

@@ -2,9 +2,6 @@
 
 import React, { Component } from 'react';
 
-
-import { BrowserRouter, Route, Link } from "react-router-dom";
-
 import {styles} from './aboutcss.css';
 
 class AboutComponent extends Component {

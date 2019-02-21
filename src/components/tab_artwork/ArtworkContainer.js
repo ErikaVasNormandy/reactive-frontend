@@ -58,7 +58,7 @@ class ArtworkContainer extends Component {
 
   toggleAdminItem(e){
     var auth = window.prompt("Create a New Post: ")
-    if(auth == `${process.env.REACT_APP_PW}`){
+    if(auth === `${process.env.REACT_APP_PW}`){
     this.setState({ 
       showAdminPanel: !this.state.showAdminPanel 
     });

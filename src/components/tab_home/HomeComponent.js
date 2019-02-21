@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 import ContainerComponent from '../BaseContentLoaderComponent/ContainerComponent'
 
-import { BrowserRouter, Route, Link } from "react-router-dom";
 
 class HomeComponent extends Component {
   render() {

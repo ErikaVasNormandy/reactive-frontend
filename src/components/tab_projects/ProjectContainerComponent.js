@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import ProjectInputComponent from './ProjectInputComponent';
 import ProjectListComponent from './ProjectListComponent';
-import TileComponent from './TileComponent';
 import sharedStyles from '../../App.css'
 
 require('dotenv').config();
@@ -58,7 +57,7 @@ class ProjectContainerComponent extends Component {
 
   toggleAdminItem(e){
     var auth = window.prompt("Create a New Post: ")
-    if(auth == `${process.env.REACT_APP_PW_PROJ}`){
+    if(auth === `${process.env.REACT_APP_PW_PROJ}`){
     this.setState({ 
       showAdminPanel: !this.state.showAdminPanel 
     });
@@ -67,12 +66,10 @@ class ProjectContainerComponent extends Component {
 }
 
   render() {
-    {/* What is this for? */}
     let { projects } = this.state;
 
     return(
       <div>
-      {/* Ping the mlab server and get the contents back*/}
             { this.getProjects()}
 
 
@@ -80,7 +77,6 @@ class ProjectContainerComponent extends Component {
  
             <button className="blue-grey lighten-4 adminBtn material-icons waves-effect waves-light btn " onClick={this.toggleAdminItem} value="showAdmin">palette</button>
 
-            {/* Render out the contents via a list */}
             <br/>
             <ProjectListComponent projects={projects} deleteProject={this.deleteProject} isVisible={this.state.showAdminPanel}/>
       </div>
