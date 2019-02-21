@@ -55,20 +55,19 @@ addCharsheet = () =>{
     	Tier: this.state.Tier, 
 		  Background : this.state.Background,
 		  CurrentStatus: this.state.CurrentStatus,  
-		  images : this.state.images,  
+		  images : this.state.images
     }
     console.log("Hello from charsheet!")
+    console.log(task)
 
     if(task.CharacterName && task.CharacterName.length > 0){
-      console.log("Hello from charsheet IF LOOP!")
-
      //// Submit
       axios.post('/api/charsheets', task)
         .then(res => {
           console.log(task)
           if(res.data){
             /// Defined in ContainerComponent.js
-            this.props.getCharsheets();
+            this.props.getContents();
             /// Reset
             this.setState({
               CharacterName: "",
@@ -82,7 +81,7 @@ addCharsheet = () =>{
 				      Background : "",
 				      CurrentStatus: "",  
 				      images : []
-  				})
+  				  })
           }
         })
         .catch(err => console.log(err))
