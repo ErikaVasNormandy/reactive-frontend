@@ -80,17 +80,15 @@ class CharsheetContainerComponent extends Component {
 
 
             {this.state.showAdminPanel ? <CharsheetInputComponent getCharsheets={this.getCharsheets}/> : null }
+
+            <CharsheetListComponent charsheets={charsheets} deleteCharsheet={this.deleteCharsheet} isVisible={this.state.showAdminPanel}/>
+
  
             <button className="blue-grey lighten-4 adminBtn material-icons waves-effect waves-light btn " onClick={this.toggleAdminItem} value="showAdmin">palette</button>
 
 
             {/* Render out the contents via a list */}
             <br/>
-
-
-           
-            <h4>Characters</h4>
-            <CharsheetListComponent charsheets={charsheets} deleteCharsheet={this.deleteCharsheet} isVisible={this.state.showAdminPanel}/>
 
 
 
