@@ -53,7 +53,7 @@ class CharsheetTileComponent extends Component {
 	
 		return(
 
-				<div className = "tileComponentWorldBuilding" onClick= {this.handleClickedTile}>
+				<div className = "tileComponentCharsheet" onClick= {this.handleClickedTile}>
 				   {this.state.booleanForIsVisible ? 
 				   	<Charsheet_MoreDetailsComponent 
 				   	CharacterName = {this.props.CharacterNameProp}
