@@ -21,9 +21,9 @@ class Charsheet_VignetteComponent extends Component {
 				<div className = "statsDiv">
 					<p><strong>Roles: </strong> {this.props.Roles}	</p>
 					<p><strong>Age: </strong> {this.props.Age}	</p>
-					<p><strong>Gender: </strong> {this.props.Gender}	</p>
+					<p><strong>Childhood: </strong> {this.props.Childhood}	</p>
 					<p><strong>Alignment: </strong> {this.props.Alignment}	</p>
-					<p><strong>Tier: </strong> {this.props.Tier}	</p>
+					<p><strong>Goals: </strong> {this.props.Goals}	</p>
 				</div>
 
 

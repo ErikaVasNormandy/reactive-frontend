@@ -35,12 +35,12 @@ const CharsheetSchema = new Schema({
 		required: [true, "the field is required"]
 	},	
 
-	Gender: {
+	Childhood: {
 		type: String, 
 		required: [true, "the field is required"]
 	},
 
-	Tier: {
+	Goals: {
 		type: String, 
 		required: [true, "the field is required"]
 	},

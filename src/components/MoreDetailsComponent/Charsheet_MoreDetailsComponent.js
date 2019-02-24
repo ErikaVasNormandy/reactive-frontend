@@ -16,8 +16,8 @@ class Charsheet_MoreDetailsComponent extends Component {
 					Roles = {this.props.Roles}
 					Age = {this.props.Age}
 				   	Alignment = {this.props.Alignment}				   	
-				   	Gender = {this.props.Gender}
-				   	Tier = {this.props.Tier}
+				   	Childhood = {this.props.Childhood}
+				   	Goals = {this.props.Goals}
 				   	Background = {this.props.Background}
 				   	CurrentStatus = {this.props.CurrentStatus}
 				   	images = {this.props.images}

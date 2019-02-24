@@ -40,8 +40,8 @@ class CharsheetListComponent extends Component{
                           PriorityProp = {charsheet.Priority}
                           AgeProp = {charsheet.Age}
                           AlignmentProp = {charsheet.Alignment}
-                          GenderProp = {charsheet.Gender}
-                          TierProp = {charsheet.TierProp}
+                          ChildhoodProp = {charsheet.Childhood}
+                          GoalsProp = {charsheet.Goals}
                           BackgroundProp = {charsheet.Background}
                           CurrentStatusProp = {charsheet.CurrentStatus}
                           imagesProp = {charsheet.images}  

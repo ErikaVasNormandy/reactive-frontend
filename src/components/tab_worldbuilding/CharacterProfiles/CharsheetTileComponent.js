@@ -28,8 +28,8 @@ class CharsheetTileComponent extends Component {
 		Priority: 0,
 		Alignment: "",
 		Age: "",
-		Gender:"",
-		Tier:"",
+		Childhood: "",
+		Goals:"",
 		Background:"",
 		CurrentStatus:"",
 		images: []
@@ -61,8 +61,8 @@ class CharsheetTileComponent extends Component {
 				   	Roles = {this.props.RolesProp}
 				   	Age = {this.props.AgeProp}
 				   	Alignment = {this.props.AlignmentProp}				   	
-				   	Gender = {this.props.GenderProp}
-				   	Tier = {this.props.TierProp}
+				   	Childhood = {this.props.ChildhoodProp}
+				   	Goals = {this.props.GoalsProp}
 				   	Background = {this.props.BackgroundProp}
 				   	CurrentStatus = {this.props.CurrentStatusProp}
 				   	images = {this.props.imagesProp}
