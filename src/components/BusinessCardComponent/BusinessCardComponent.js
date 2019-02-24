@@ -10,7 +10,7 @@ class BusinessCardComponent extends Component {
 
     	return (
         <div id="sideMenu" className="card large">
-          <img className="menuImg" src="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/images/VoidRune2MenuImg.png" 
+          <img className="menuImg" src="https://s3-us-west-1.amazonaws.com/scavengers-repo.com/businesscard/VoidRune2MenuImg.png" 
           alt="Huh couldn't find it"></img>
 
           

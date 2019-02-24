@@ -11,6 +11,7 @@ class WorldBuildingComponent extends Component {
     return (
       <div>
       	<h2>World Building</h2>
+      	
       	<WorldBuildingContainerComponent/>
       </div>
     );
