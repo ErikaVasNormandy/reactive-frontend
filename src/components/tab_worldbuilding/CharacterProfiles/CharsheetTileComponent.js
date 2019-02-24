@@ -76,7 +76,6 @@ class CharsheetTileComponent extends Component {
             		<div className="CharProfileDisplayText"><strong>Role(s): 	</strong> {this.props.RolesProp}</div>
             		<div className="CharProfileDisplayText"><strong>TLDR: 		</strong> <span dangerouslySetInnerHTML={createMarkup(this.props.tldrProp)} ></span></div>
 
-
 				
 				</div>
 

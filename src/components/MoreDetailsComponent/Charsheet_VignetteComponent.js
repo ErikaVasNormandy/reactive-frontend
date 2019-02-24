@@ -15,7 +15,7 @@ class Charsheet_VignetteComponent extends Component {
 	render(){
 		return(
 			<div className="vignettePage">
-				<h3>{this.props.CharacterName}</h3>
+				<h2>{this.props.CharacterName}</h2>
 				<img className = "profilePic" src = {this.props.PreviewPic} alt ="img moved"/>
 
 				<div className = "statsDiv">
@@ -29,6 +29,8 @@ class Charsheet_VignetteComponent extends Component {
 
 				<h3>Background</h3>
 				<div dangerouslySetInnerHTML={createMarkup(this.props.Background)} ></div>
+
+				<h3>Current Status</h3>
 				<div dangerouslySetInnerHTML={createMarkup(this.props.CurrentStatus)} ></div>
 
 					<ul>

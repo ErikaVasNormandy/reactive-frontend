@@ -174,7 +174,7 @@ addCharsheet = () =>{
           <input type="number" placeholder="PRIORITY" onChange={this.handlePriority} value={this.state.Priority}/>
           <input type="number" placeholder="AGE" onChange={this.handleAge} value={this.state.Age}/>    
           <input type="text" placeholder="ALIGNMENT" onChange={this.handleAlignment} value={this.state.Alignment}/>
-          <input type="text" placeholder="GENDER" onChange={this.handleChildhood} value={this.state.Childhood}/>
+          <input type="text" placeholder="CHILDHOOD" onChange={this.handleChildhood} value={this.state.Childhood}/>
           <input type="text" placeholder="GOALS" onChange={this.handleGoals} value={this.state.Goals}/>
           <textarea placeholder="BACKGROUND" className="materialize-textarea" onChange={this.handleBackground} value={this.state.Background}/>
           <input type="text" placeholder="CURRENT STATUS" onChange={this.handleCurrentStatus} value={this.state.CurrentStatus}/>
