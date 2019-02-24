@@ -135,7 +135,7 @@ class WorldBuildingContainerComponent extends Component {
             <div id = "Introduction">
 
               <p>Arda Hyperion is tentative webseries set in an alternate timeline where humans have discovered Atomcraft:
-               limited read-write access to the Operating System running the Universe
+               limited read-write access to the Operating System running the Universe.
 
               Those who practice Atomcraft are known as "Atomancers", and are known for their expertise in the forging and use of Extradimensional Matter (EM). 
 
