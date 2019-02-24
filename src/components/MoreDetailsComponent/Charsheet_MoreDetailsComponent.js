@@ -13,7 +13,7 @@ class Charsheet_MoreDetailsComponent extends Component {
 				<Charsheet_VignetteComponent	
 					CharacterName = {this.props.CharacterName}
 					PreviewPic = {this.props.PreviewPic}
-					Roles = {this.props.Role}
+					Roles = {this.props.Roles}
 					Age = {this.props.Age}
 				   	Alignment = {this.props.Alignment}				   	
 				   	Gender = {this.props.Gender}

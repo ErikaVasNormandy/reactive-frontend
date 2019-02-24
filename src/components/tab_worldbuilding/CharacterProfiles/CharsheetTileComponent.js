@@ -71,7 +71,7 @@ class CharsheetTileComponent extends Component {
 
 					<h5>{this.props.CharacterNameProp}  </h5>
 					
-					<div className = "imageContainer" ><img src={this.props.PreviewPicProp} alt ="huh image must have moved"/></div>
+					<div className = "tileImagePreview" ><img src={this.props.PreviewPicProp} alt ="huh image must have moved"/></div>
             		
             		<div className="CharProfileDisplayText"><strong>Role(s): 	</strong> {this.props.RolesProp}</div>
             		<div className="CharProfileDisplayText"><strong>TLDR: 		</strong> <span dangerouslySetInnerHTML={createMarkup(this.props.tldrProp)} ></span></div>

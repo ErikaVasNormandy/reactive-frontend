@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import {styles} from './moredetails.css';
+import {styles} from './charsheetdetails.css';
 
 
 const createMarkup = encodedHtml => ({
@@ -15,16 +15,19 @@ class Charsheet_VignetteComponent extends Component {
 	render(){
 		return(
 			<div className="vignettePage">
-				<h2>{this.props.CharacterName}</h2>
-				<div className = "statsDiv">
-					<p>{this.props.Roles}	</p>
-					<p>{this.props.Age}	</p>
-					<p>	</p>
-					<p>{this.props.Alignment}	</p>
-					<p>{this.props.Tier}	</p>
-					<p>{this.props.Gender}	</p>
-				</div>
+				<h3>{this.props.CharacterName}</h3>
 				<img className = "profilePic" src = {this.props.PreviewPic} alt ="img moved"/>
+
+				<div className = "statsDiv">
+					<p><strong>Roles: </strong> {this.props.Roles}	</p>
+					<p><strong>Age: </strong> {this.props.Age}	</p>
+					<p><strong>Gender: </strong> {this.props.Gender}	</p>
+					<p><strong>Alignment: </strong> {this.props.Alignment}	</p>
+					<p><strong>Tier: </strong> {this.props.Tier}	</p>
+				</div>
+
+
+				<h3>Background</h3>
 				<div dangerouslySetInnerHTML={createMarkup(this.props.Background)} ></div>
 				<div dangerouslySetInnerHTML={createMarkup(this.props.CurrentStatus)} ></div>
 

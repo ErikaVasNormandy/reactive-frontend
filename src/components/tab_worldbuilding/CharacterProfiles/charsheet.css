@@ -1,42 +1,80 @@
 
 .tileComponentCharsheet {
     border-radius: 15px;
-    background-color: rgba(10,10,10,0.2); 
-    color: black;
+    background-color: rgba(10,10,10,.2);
+    color: #000;
     overflow: hidden;
     text-overflow: ellipsis;
-
-	  width: 350px;
-	  min-height: 500px;
+    width: 350px;
+    min-height: 500px;
     max-height: 500px;
-
-    margin: auto;
-    margin-bottom: 1%;
-    padding: 1px 1px 1px 1px;
-  }
-
-strong { 
-  font-weight: bold;
-  font-size: 1.2em;
+    margin: auto auto 1%;
+    padding: 1px;
+    overflow-y: scroll;
 }
-.tileComponentCharsheet h5{
+
+.tileComponentCharsheet h1 {
   white-space: pre-wrap;
   overflow: hidden;
   text-overflow: ellipsis;
 	font-size: 120%;
 	font-weight: bold;
 	padding: 10px 10px 10px 10px;
-
 }
 
-.dateStamp{
-	font-size: 12px;
-  float: right;
-  margin-top: 20px;
-  padding-top: 20px;
-
+.tileComponentCharsheet h2{
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
 }
-.imageContainer{
+
+.tileComponentCharsheet h3{
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+}
+
+.tileComponentCharsheet h4{
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+}
+
+.tileComponentCharsheet h5 {
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 5px 5px 5px 5px;
+}
+
+
+.tileComponentCharsheet h6 {
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 5px 5px 5px 5px;
+}
+
+
+strong { 
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.tileImagePreview{
   width: 100%;
   max-height: 250px;
   background-position: center center;
@@ -44,9 +82,8 @@ strong {
   overflow: hidden;
 }
 
-.imageContainer img{
-  width: 50%;
-  margin-left: 20%;
+.tileImagePreview img{
+  width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
