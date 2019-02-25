@@ -3,6 +3,7 @@
 }
 .adminBtn{
   float: right;
+  opacity: 0.5;
 }
 .rootElement{
   min-height: 600px;
