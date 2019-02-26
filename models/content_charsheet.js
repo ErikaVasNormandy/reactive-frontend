@@ -23,7 +23,6 @@ const CharsheetSchema = new Schema({
 		required: [true, "the field is required"]
 	},
 
-
 	Priority: { 
 		type: Number,
 		required: [true,"date is required"]

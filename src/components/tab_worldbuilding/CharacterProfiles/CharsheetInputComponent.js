@@ -15,8 +15,9 @@ class CharsheetInputComponent extends Component {
     this.handletldr = this.handletldr.bind(this);
     this.handlePriority = this.handlePriority.bind(this);
     this.handleAlignment = this.handleAlignment.bind(this);  
-    this.handleChildhood = this.handleChildhood.bind(this);     
     this.handleAge = this.handleAge.bind(this);     
+
+    this.handleChildhood = this.handleChildhood.bind(this);     
     this.handleGoals = this.handleGoals.bind(this);  
     this.handleBackground = this.handleBackground.bind(this);
     this.handleCurrentStatus = this.handleCurrentStatus.bind(this);  
@@ -33,12 +34,12 @@ class CharsheetInputComponent extends Component {
       CharacterName: "",
       PreviewPic: "",
       Roles: "",
-   		tldr : "",
-    	Priority : 0,
-    	Alignment: "",  
-    	Childhood: "",     
-      Goals: "",  
+      tldr : "",
+      Priority : 0,
+      Alignment: "", 
       Age: 0,
+      Childhood: "",  
+      Goals: "",  
       Background : "",
       CurrentStatus: "",  
       images : []
@@ -49,12 +50,12 @@ addCharsheet = () =>{
       CharacterName: this.state.CharacterName,
       PreviewPic: this.state.PreviewPic,
       Roles: this.state.Roles,
-   		tldr : this.state.tldr,
-    	Priority : this.state.Priority,
-    	Alignment: this.state.Alignment,  
-    	Childhood: this.state.Childhood,     
-    	Age: this.state.Age,
-    	Goals: this.state.Goals, 
+      tldr : this.state.tldr,
+      Priority : this.state.Priority,
+      Alignment: this.state.Alignment,  
+      Age: this.state.Age,
+      Childhood: this.state.Childhood,     
+      Goals: this.state.Goals, 
       Background : this.state.Background,
       CurrentStatus: this.state.CurrentStatus,  
       images : this.state.images
@@ -131,16 +132,17 @@ addCharsheet = () =>{
       Alignment: event.target.value
     })
   }
-  handleChildhood = (event) =>{
-    this.setState({
-      Childhood: event.target.value
-    })
-  }
   handleAge = (event) =>{
     this.setState({
       Age: event.target.value
     })
   }
+  handleChildhood = (event) =>{
+    this.setState({
+      Childhood: event.target.value
+    })
+  }
+
   handleGoals = (event) =>{
     this.setState({
       Goals: event.target.value
