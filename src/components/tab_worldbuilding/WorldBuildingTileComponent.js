@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import moment from 'moment';
+import {styles} from './worldbuilding.css';
 
 import MoreDetailsComponent from '../MoreDetailsComponent/MoreDetailsComponent'
 
@@ -42,7 +43,7 @@ class WorldBuildingTileComponent extends Component {
 		const displayDate = moment(this.props.dateProp).format('ddd, DD-MMM-YYYY')
 		return(
 
-				<div className = "tileComponentWorldBuilding" onClick= {this.handleClickedTile}>
+				<div id = "tileComponentWorldBuilding" onClick= {this.handleClickedTile}>
 				   {this.state.booleanForIsVisible ? <MoreDetailsComponent details = {this.props.bodyProp} /> : null }
 
 					<div className ="row">

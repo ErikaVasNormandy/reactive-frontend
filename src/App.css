@@ -1,9 +1,22 @@
+textarea.materialize-textarea {
+    line-height: normal;
+    overflow-y: hidden;
+    padding: .8rem 0 .8rem 0;
+    resize: none;
+    min-height: 3rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: scroll !important;
+}
+
 .adminItem{
   display: none;
 }
 .adminBtn{
-  float: right;
-  opacity: 0.5;
+    float: right;
+    opacity: .2;
+    width: 10px;
+    height: 10px;
 }
 .rootElement{
   min-height: 600px;

@@ -12,7 +12,7 @@ textarea {
   margin-bottom: 50px;
   margin-left: 48%;
 }
-.tileComponent{
+#tileComponent{
     border-radius: 15px;
     background-color: rgba(240,240,240,1) !important;
     color: black;
@@ -25,6 +25,9 @@ textarea {
     margin-top: 50px !important;
     padding: 10px 10px 10px 10px;
 }
+
+
+
 .tileComponent img {
   width: 100%;
   background-position: center center;
@@ -76,3 +79,21 @@ textarea {
   padding-top: 20px;
 }
 
+/* Mobile Rendering */
+@media only screen and (max-width: 800px) {
+    #tileComponent {
+      width: 100%;
+    }
+    #contentContainer {
+        float: none;
+        margin-left: 8%;
+
+    }
+    .row .col{
+      padding: 0px 0px 0px 0px;
+    }
+    .displayWindow{
+      margin-right: 10%;
+
+    }
+}

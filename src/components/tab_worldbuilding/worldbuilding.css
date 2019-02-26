@@ -1,5 +1,5 @@
 
-.tileComponentWorldBuilding {
+#tileComponentWorldBuilding {
     border-radius: 15px;
     background-color: rgba(10,10,10,0.2); 
     color: black;
@@ -117,4 +117,45 @@ code {
 }
 .row{
   margin-bottom: 0px !important;
+}
+
+.materialize-textarea  {
+    line-height: normal;
+    overflow-y: hidden;
+    padding: .8rem 0 .8rem 0;
+    resize: none;
+    min-height: 3rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: scroll !important
+}
+
+/* Mobile Rendering */
+@media only screen and (max-width: 800px) {
+    #tileComponentWorldBuilding{
+      width: 100%;
+      padding: 1% 1% 1% 1%;
+
+    }
+    #tileComponentWorldBuilding h4{
+      padding-left: 20px;
+
+    }   
+    #tileComponentWorldBuilding h5{
+      padding-left: 20px;
+
+    }   
+    #tileComponentWorldBuilding h6{
+      padding-left: 20px;
+
+    }   
+
+
+    .row .col{
+      padding: 0px 0px 0px 0px;
+    }
+    .displayWindow{
+      width: 100%;
+
+    }
 }

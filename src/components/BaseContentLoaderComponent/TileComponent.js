@@ -32,7 +32,7 @@ class TileComponent extends Component {
 		const displayDate = moment(this.props.dateProp).format('ddd, DD-MMM-YYYY')
 
 		return(
-				<div className = "tileComponent">
+				<div id = "tileComponent">
 
  
                 {/* Top Part of the "Photo" */}

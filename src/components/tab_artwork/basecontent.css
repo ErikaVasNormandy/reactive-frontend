@@ -89,3 +89,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Mobile Rendering */
+@media only screen and (max-width: 800px) {
+    .tileComponent {
+      width: 100%;
+    }
+    #contentContainer {
+        float: none;
+        margin-left: 8%;
+
+    }
+    .row .col{
+      padding: 0px 0px 0px 0px;
+    }
+    .displayWindow{
+      margin-right: 10%;
+
+    }
+}
