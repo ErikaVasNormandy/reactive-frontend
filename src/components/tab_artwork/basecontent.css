@@ -18,12 +18,12 @@ textarea {
   color: black;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  width: 640px;
+  width: 60%;
   min-height: 805px;
   margin: auto;
   margin-bottom: 1%;
 }
+
 .tileComponent img {
   width: 100%;
   background-position: center center;

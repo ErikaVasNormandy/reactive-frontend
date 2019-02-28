@@ -57,8 +57,8 @@
     border-color: black;
     float: right;
     display: inline-block;
-    min-width: 100%;
-    min-height: 600px;
+    min-width: 80%;
+    min-height: 2vh;
 
     font-family: 'Palatino','Palatino Linotype';
 }
