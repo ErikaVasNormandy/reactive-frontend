@@ -48,7 +48,7 @@ class TileComponent extends Component {
                  		 		<div className="baseImageContainer"><img src={image}/></div>
 	                	  </li>
                			)})}
- 					<p>{this.props.bodyProp}</p>
+ 					<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.bodyProp)}/>
 
 				</div>
 
