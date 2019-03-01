@@ -1,10 +1,9 @@
 
 .navBar{
-	  margin: 0 auto;
+	margin: 0 auto;
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px 5px 5px 5px;
     text-transform: uppercase;
     font-weight: bold;
     background-color: rgba(1,1,1,0.8);
@@ -15,11 +14,9 @@
     border-width: medium;
     border-bottom-style: double;
     text-align: left;
-    padding-left: 10px;
     vertical-align: middle;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
-
 }
 
 .navBar ul {
@@ -31,16 +28,36 @@
   list-style-type: none;
   padding: 1px 1px 1px 1px;
   display: inline-block;
-  margin-left: 5%;
-  margin-right: 5%;
-  overflow-wrap: break-word;
-  font-size: 14px;
+  width: 15%;
 }
-
+.navBar li:hover{
+	background-color: rgba(250,250,250,0.5);
+	color: black;
+}
+.navBar li:active{
+	background-color: white;
+	color: black;
+}
 
 .navBar a {
 	color: white;
 }
+.navBar a:hover{
+	color: black;
+}
+
+
+.hoveringLink{
+  padding-left: 5%;
+  padding-right: 5%;
+  overflow-wrap: break-word;
+  font-size: 14px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 10em;
+  background-color: rgba(0,0,0,0);
+}
+
 
 .displayWindow{
     border-radius: 15px;
@@ -67,4 +84,26 @@ hr{
   color: black;
   border-style: double;
   
+}
+
+/* Mobile Rendering */
+@media only screen and (max-width: 600px) {
+    .navBar{
+    	overflow-x:hidden;
+    	padding: 0px 0px 0px 0px;
+    }
+    .navBar li {
+    	list-style-type: none;
+  		padding: 1px 1px 1px 1px;
+  		display: inline-block;
+  		width: 90%;
+
+  		padding-top: 1%;
+  		padding-bottom: 1%;
+  		font-size: 1em;
+  		padding-left: 2em;
+		text-align: left;	
+		overflow-x:hidden;
+
+	}
 }

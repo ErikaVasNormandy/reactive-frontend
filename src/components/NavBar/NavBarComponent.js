@@ -18,21 +18,25 @@ class NavBarComponent extends Component {
      <div>
       <BrowserRouter>
        <div>
-      	<div className ="navBar">
-      		<ul>
-      			<li>
-      				<Link to="/">Home</Link>
+      	<div className ="navBar nav-wrapper">
+      		<ul id = "nav-mobile">
+      			<li className = "hoveringLink waves-effect">
+              <Link to="/" >Home</Link>
       			</li>
-      			<li>
+
+      			<li className="hoveringLink waves-effect">
       				<Link to="/projects">Projects</Link>
       			</li>
-      			<li>
-       				<Link to="/artwork">Artwork</Link>
+
+      			<li className="hoveringLink waves-effect">
+              <Link to="/artwork">Artwork</Link>
       			</li>
-      			<li>
+
+      			<li className="hoveringLink waves-effect">
        				<Link to="/worldbuilding">World Building</Link>
       			</li>
-      			<li>
+
+      			<li className="hoveringLink waves-effect">
        				<Link to="/about">About</Link>
       			</li>
       		</ul>

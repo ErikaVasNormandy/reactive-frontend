@@ -26,7 +26,17 @@ class CharsheetListComponent extends Component{
           this.props.charsheets &&
             this.props.charsheets.length > 0 ?
             (
-              this.props.charsheets
+              this.props.charsheets.sort(function(a,b){ 
+                //return a.Priority < b.Priority ? 1 : -1;
+                if(a.Priority < b.Priority) {
+                  return 1
+                }
+                else {
+                  return -1
+                }
+              }
+
+              )
               .map(charsheet => {
                 return(
                       <li key={charsheet._id} className="worldbuilding_li"> 
