@@ -127,7 +127,7 @@ class WorldBuildingContainerComponent extends Component {
                   <li><h6>&nbsp;Environment</h6></li>
                   <li><h6>&nbsp;Politics</h6></li>
                   <li><h6>&nbsp;Characters</h6></li>
-                  <li><h6>&nbsp;Plot</h6></li>
+                  <li><h6>&nbsp;Concept Scrapbook</h6></li>
                   <li><h6>&nbsp;</h6></li>
                 </ul>
               </td>
@@ -224,7 +224,7 @@ class WorldBuildingContainerComponent extends Component {
             <CharsheetContainerComponent/>
             
 
-            <h4>Plot</h4>
+            <h4>Concept Scrapbook</h4>
             <WorldBuildingListComponent worldbuildings={PlotFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
      
 
