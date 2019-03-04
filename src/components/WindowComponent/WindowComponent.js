@@ -28,7 +28,7 @@ class WindowComponent extends Component {
   		super(props);
 
       this.shuffleArray = this.shuffleArray.bind(this)
-
+      this.setSectionStyle = this.setSectionStyle.bind(this)
 
   		this.state = {
         time: moment().format('ddd LTS'),

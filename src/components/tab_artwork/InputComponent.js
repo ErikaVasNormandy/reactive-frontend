@@ -8,6 +8,7 @@ class InputComponent extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleChange2 = this.handleChange2.bind(this);
 		this.handleTitleChange = this.handleTitleChange.bind(this);
+    this.addContent = this.addContent.bind(this);
 
 	}
  

@@ -15,7 +15,7 @@ class WorldBuildingContainerComponent extends Component {
     super(props)
 
     this.toggleAdminItem = this.toggleAdminItem.bind(this);
-
+    this.getWorldBuildings = this.getWorldBuildings.bind(this);
   }
 
 

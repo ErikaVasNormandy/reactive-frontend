@@ -54,8 +54,8 @@ class NavBarComponent extends Component {
 
           <div className="col s10 m10 l0">
             <Switch>
-	             <div className="displayWindow">
-      		        <Route exact path="/" component={HomeComponent} />
+	             <div className  ="displayWindow">
+                    <Route exact path = "/" component={HomeComponent} />
         	         <Route exact path="/projects" component={ProjectsComponent} />
         	         <Route exact path="/artwork" component={ArtworkComponent} />
         	         <Route exact path="/worldbuilding" component={WorldBuildingComponent} />

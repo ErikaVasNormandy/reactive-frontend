@@ -12,6 +12,7 @@ class ProjectContainerComponent extends Component {
     super(props)
 
     this.toggleAdminItem = this.toggleAdminItem.bind(this);
+    this.getProjects = this.getProjects.bind(this)
 
   }
 
@@ -26,9 +27,9 @@ class ProjectContainerComponent extends Component {
     projects: []
   }
 
-  componentDidMount(){
-    this.getProjects();
-  }
+  // componentDidMount(){
+  //   this.getProjects();
+  // }
 
   getProjects = () => {
     axios.get('/api/projects')

@@ -15,6 +15,8 @@ class ArtworkContainer extends Component {
     super(props)
 
     this.toggleAdminItem = this.toggleAdminItem.bind(this);
+    this.getContents = this.getContents.bind(this);
+    this.deleteContent = this.deleteContent.bind(this);
 
   }
   getInitialState(){

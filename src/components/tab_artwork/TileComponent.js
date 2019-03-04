@@ -11,6 +11,8 @@ const createMarkup = encodedHtml => ({
 class TileComponent extends Component {
 	constructor(props){
 		super(props);
+
+		
 	}
 
 	createMarkup() {
