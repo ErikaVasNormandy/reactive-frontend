@@ -32,6 +32,10 @@ class ArtworkContainer extends Component {
   componentDidMount(){
     this.getContents();
   }
+  componentWillUnmount() {
+    clearInterval(this.getContents);
+  }
+
 
   getContents = () => {
     axios.get('/api/artworks')
@@ -68,6 +72,7 @@ class ArtworkContainer extends Component {
   }
 }
 
+
   render() {
     {/* What is this for? */}
     let { artworks } = this.state;
@@ -75,7 +80,6 @@ class ArtworkContainer extends Component {
     return(
       <div>
       {/* Ping the mlab server and get the contents back*/}
-            { this.getContents() }
             <button className="blue-grey lighten-4 adminBtn material-icons waves-effect waves-light btn" onClick={this.toggleAdminItem} value="showAdmin">videogame_asset</button>
 
             {this.state.showAdminPanel ? <InputComponent getContents={this.getContents}/> : null }

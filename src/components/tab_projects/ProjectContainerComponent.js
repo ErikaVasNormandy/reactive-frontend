@@ -27,9 +27,14 @@ class ProjectContainerComponent extends Component {
     projects: []
   }
 
-  // componentDidMount(){
-  //   this.getProjects();
-  // }
+  componentDidMount(){
+    this.getProjects();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.getProjects);
+  }
+
 
   getProjects = () => {
     axios.get('/api/projects')
@@ -71,7 +76,6 @@ class ProjectContainerComponent extends Component {
 
     return(
       <div>
-            { this.getProjects()}
 
 
             {this.state.showAdminPanel ? <ProjectInputComponent getProjects={this.getProjects}/> : null }

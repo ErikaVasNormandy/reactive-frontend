@@ -68,6 +68,10 @@ class WorldBuildingContainerComponent extends Component {
 
   }
 }
+  componentWillUnmount() {
+    clearInterval(this.getWorldBuildings);
+  }
+
 
   render() {
     {/* What is this for? */}
@@ -110,7 +114,6 @@ class WorldBuildingContainerComponent extends Component {
     return(
       <div>
       {/* Ping the mlab server and get the contents back*/}
-            { this.getWorldBuildings()}
 
             {this.state.showAdminPanel ? <WorldBuildingInputComponent getWorldBuildings={this.getWorldBuildings}/> : null }
  

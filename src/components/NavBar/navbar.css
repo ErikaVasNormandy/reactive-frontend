@@ -62,7 +62,7 @@
 .displayWindow{
     border-radius: 15px;
     overflow: auto;
-    margin-right: 10%;
+    margin-right: 1%;
     margin-bottom: 10px;
     margin-top: 2vh;
     display: inline;
@@ -74,9 +74,8 @@
     border-color: black;
     float: right;
     display: inline-block;
-    width: 80%;
+    width: 100%;
     min-height: 1vh;
-
     font-family: 'Palatino','Palatino Linotype';
 }
 hr{
