@@ -50,6 +50,7 @@ class ProjectInputComponent extends Component {
   				}
 
   	console.log("TASK         ", task)
+    console.log(this.state.bodyInput)
 
   	 if(task.title && task.title.length > 0){
   	 //// Submit
