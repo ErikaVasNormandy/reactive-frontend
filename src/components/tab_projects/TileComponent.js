@@ -30,7 +30,7 @@ class TileComponent extends Component {
 	state = {
 		action: "",
 		titleProp: "", 
-		tagsProp: "",
+		bodyProp: "",
 		dateProp: "",
 		imagesProp: []
 	}
@@ -43,7 +43,7 @@ class TileComponent extends Component {
 		const displayDate = moment(this.props.dateProp).format('ddd, DD-MMM-YYYY')
 		return(
 				<div className = "tileComponentProject" onClick= {this.handleClickedTile}>
-				   {this.state.booleanForIsVisible ? <MoreDetailsComponent details = {this.props.tagsProp}/> : null }
+				   {this.state.booleanForIsVisible ? <MoreDetailsComponent details = {this.props.bodyProp}/> : null }
 					<div className ="row">
 						<div className = "col s8 m8 l8">
 							<h5>{this.props.titleProp}  </h5>
@@ -62,7 +62,7 @@ class TileComponent extends Component {
 
 	                	  </li>
                			)})}
-						<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.tagsProp)} />
+						<div className="displayText" dangerouslySetInnerHTML={createMarkup(this.props.bodyProp)} />
 					</ul>
 
 

@@ -43,7 +43,7 @@ class ProjectListComponent extends Component{
                         <TileComponent 
                           titleProp= {project.title} 
                           dateProp = {project.dateStamp} 
-                          tagsProp={project.tags} 
+                          bodyProp={project.body} 
                           imagesProp = {project.images} 
                         ></TileComponent>
 
