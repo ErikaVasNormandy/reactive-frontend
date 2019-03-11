@@ -45,7 +45,7 @@ class ProjectInputComponent extends Component {
             action: this.state.title, 
   					title: this.state.title,
   					dateStamp: todayString,
-  					tags: this.state.bodyInput,
+  					body: this.state.bodyInput,
   					images: this.state.images
   				}
 
