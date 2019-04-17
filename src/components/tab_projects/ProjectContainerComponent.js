@@ -3,7 +3,8 @@ import axios from 'axios';
 
 import ProjectInputComponent from './ProjectInputComponent';
 import ProjectListComponent from './ProjectListComponent';
-import sharedStyles from '../../App.css'
+import sharedStyles from '../../App.css';
+
 
 require('dotenv').config();
 
@@ -13,6 +14,7 @@ class ProjectContainerComponent extends Component {
 
     this.toggleAdminItem = this.toggleAdminItem.bind(this);
     this.getProjects = this.getProjects.bind(this)
+    
 
   }
 
@@ -34,8 +36,24 @@ class ProjectContainerComponent extends Component {
   componentWillUnmount() {
     clearInterval(this.getProjects);
   }
+  refineURL(props){
+    console.log("REFINED URL CALLED")
+    var bodyPropInput = this.props.bodyProp
 
+    var baseurl = "https://api.github.com/repos/ErikaVasNormandy/"
+    var extractedurlarray = bodyPropInput.split("/")
+    var readmeurl = baseurl + extractedurlarray[extractedurlarray.length -1 ] + "/readme"
+     // https://github.com/ErikaVasNormandy/MERNstack
+    return(readmeurl)
+  }
+  getGithub = () => {
+    axios.get("https://api.github.com/repos/ErikaVasNormandy/reactive-frontend/readme",{headers: {"accept": "application/vnd.github.v3+json"}}).then(
+      res => {
 
+        console.log(atob(res.data.content))
+        console.log("GetGithub called")
+      })
+  }
   getProjects = () => {
     axios.get('/api/projects')
       .then(res => {
@@ -73,7 +91,6 @@ class ProjectContainerComponent extends Component {
 
   render() {
     let { projects } = this.state;
-
     return(
       <div>
 

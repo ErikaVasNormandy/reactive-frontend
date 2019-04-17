@@ -12,7 +12,7 @@ let todayString = today.toLocaleString()
 
 
 class ProjectInputComponent extends Component {
-
+ 
 	constructor(props){
 		super(props)
 
