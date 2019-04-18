@@ -17,14 +17,18 @@
     background-image: url(https://s3-us-west-1.amazonaws.com/scavengers-repo.com/images/grungy_paper_texture_v_6_by_bashcorpo_dmeybp.jpg);
     background-size: cover;
     background-position: center;
-    width: 60%;
+    width: 80%;
     height: 100%;
     overflow-y: scroll;
-    font-size: 1.3em;
+    font-size: 0.8em;
     padding: 10% 10% 10% 10%;
 }
 .vignettePage img{
     width: 60%;
+}
+.vignettePage h1, h2, h3, h4, h5 {
+	font-size: 1em;
+	font-weight: bold;
 }
 
 
@@ -81,4 +85,9 @@ h5{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(240,240,240, 0.8);
+}
+.closebtn{
+
+
+	
 }
