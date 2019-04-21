@@ -1,6 +1,7 @@
 
 
 import React, { Component } from 'react';
+import WorldBuildingContainerComponent from './WorldBuildingContainerComponent'
 
 
 import { BrowserRouter, Route, Link } from "react-router-dom";
@@ -10,6 +11,8 @@ class WorldBuildingComponent extends Component {
     return (
       <div>
       	<h2>World Building</h2>
+      	
+      	<WorldBuildingContainerComponent/>
       </div>
     );
   }

@@ -1,0 +1,58 @@
+/*//gets superseded by charsheet details.css*/
+
+.mainPage{
+	z-index: 10;
+
+	position: fixed;
+ 	top: 0px;
+ 	bottom: 0px;
+ 	left: 0px;
+ 	right: 0px;
+ 	overflow: hidden;
+ 	background-color: rgba(17,17,17,0.5);
+
+
+ 	height: 100vh;
+ 	width: 100vw;
+
+}
+
+.vignettePage{
+	background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/8bdec6bc-0ef4-4d9c-bf67-5fdaaea0b446/d495tan-f2441396-4045-4755-96c4-f40421209691.png/v1/fill/w_900,h_1200,strp/old_paper_stock_03_by_ftourini_d495tan-fullview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width: 80%; 
+    height: 95%;
+    overflow-y: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8em;
+    padding: 200px 200px 200px 200px;
+}
+
+.vignettePage h1, h2, h3, h4, h5 {
+	font-size: 2em;
+}
+
+
+
+.profilePic {
+    width: 40%;
+    float: right;
+    margin: 20px 20px 20px 20px;
+    display: table-cell;
+}
+
+.statsDiv{
+    display: table-cell;
+}
+.galleryPic{
+    width: 30%;
+    display: inline;
+}
+.closebtn{
+	background-color: red;
+	position: absolute;
+	z-index:11;
+}

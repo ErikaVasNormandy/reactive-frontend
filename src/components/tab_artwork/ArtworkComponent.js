@@ -2,14 +2,14 @@
 
 import React, { Component } from 'react';
 
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import ArtworkContainer from './ArtworkContainer'
 
 class ArtworkComponent extends Component {
   render() {
     return (
       <div>
       	<h2>Artwork</h2>
-
+      	<ArtworkContainer/>
       </div>
     );
   }
