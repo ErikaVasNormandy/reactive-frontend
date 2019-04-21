@@ -1,0 +1,47 @@
+{
+  "name": "reactive-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "base-64": "^0.1.0",
+    "body-parser": "^1.18.3",
+    "braces": "^3.0.2",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "markdown": "^0.5.0",
+    "markdown-react-js": "^1.0.2",
+    "mongoose": "^5.5.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-markdown": "^4.0.8",
+    "react-meta-tags": "^0.7.4",
+    "react-router-dom": "^4.3.1",
+    "serve": "^10.1.2",
+    "tar": "^4.4.8",
+    "typescript": "^3.4.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "proxy": "http://reactive.scavengers-repo.com:5000/",
+  "devDependencies": {
+    "moment": "^2.24.0",
+    "react-scripts": "^2.1.8"
+  }
+}
