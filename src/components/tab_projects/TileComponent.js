@@ -14,11 +14,7 @@ import MoreDetailsComponent from '../MoreDetailsComponent/MoreDetailsComponent';
 import ReactMarkdown from 'react-markdown';
 
 /// /// Module for preventing xss scripts
-import _ from 'lodash';
-
-
-
-
+import _ from 'lodash'; 
 
 
 /// /// Prevent xss scripting
@@ -100,9 +96,12 @@ class TileComponent extends Component {
 					<div className ="row">
 						<div className = "col s8 m8 l8">
 							<h5>{this.props.titleProp}  </h5>	
+
 						</div>
-						<div className = "col s4 m4 l4 dateStamp">
-							{displayDate} 
+						<div className = "col s4 m4 l4 dateStampProject">
+{displayDate} 
+							<div className="link"><a href= {this.props.bodyProp}>Github Repo </a></div>
+
 						</div>
 					</div>
 					<ul>
@@ -118,6 +117,7 @@ class TileComponent extends Component {
 						})
 					}
 					  <ReactMarkdown source={this.state.readme} />
+						}
 					}
 				}
 				

@@ -21,16 +21,55 @@
   text-overflow: ellipsis;
 	font-size: 120%;
 	font-weight: bold;
-	padding: 10px 10px 10px 10px;
+  padding-left: 20px;
+
+}
+.tileComponentProject h4 {
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-left: 10px;
 
 }
 
-.dateStamp{
+.tileComponentProject h3{
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-left: 10px;
+
+}
+.tileComponentProject h2{
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-left: 10px;
+
+}
+.tileComponentProject h1{
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-left: 10px;
+
+}
+p{
+  padding-left: 10px;
+  font-size: 0.8em;
+}
+.dateStampProject{
 	font-size: 12px;
   float: right;
-  margin-top: 20px;
-  padding-top: 20px;
-
+  margin-top: 5px;
+  padding-right: 5px;
 }
 .imageContainer{
   width: 100%;
@@ -59,12 +98,6 @@
 	margin: 5px 5px 5px 5px;
 }
 
-
-button:active{
-
-}
-button:clicked{
-}
 
 
 textarea {
@@ -107,8 +140,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.displayText{
-  padding: 5px 5px 5px 5px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
+
+.link{
+  float: right;
+  font-size: 0.8em;
+  font-weight: bold;
+
 }
