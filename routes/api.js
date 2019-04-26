@@ -155,6 +155,7 @@ router.get('/charsheets', (req, res, next) => {
 });
 
 router.post('/charsheets', (req, res, next) => {
+	console.log("HELLO FROM INDEX.JS");
 	if(req.body){
     	Charsheet.create(req.body)
      	 .then(data => res.json(data))
