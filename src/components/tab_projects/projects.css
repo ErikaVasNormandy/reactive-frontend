@@ -15,20 +15,29 @@
     margin-top: 20px;
 }
 
+.tileComponentProject h6{
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-weight: bold;
+  padding-left: 10px;
+
+}
 .tileComponentProject h5{
   white-space: pre-wrap;
   overflow: hidden;
   text-overflow: ellipsis;
 	font-size: 120%;
 	font-weight: bold;
-  padding-left: 20px;
+  padding-left: 10px;
 
 }
 .tileComponentProject h4 {
   white-space: pre-wrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: bold;
   padding-left: 10px;
 
@@ -66,10 +75,16 @@ p{
   font-size: 0.8em;
 }
 .dateStampProject{
-	font-size: 12px;
+	font-size: 10px;
   float: right;
-  margin-top: 5px;
-  padding-right: 5px;
+  margin-top: 3px;
+  margin-right: 2px;
+}
+.link{
+  float: right;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-right: 2px;
 }
 .imageContainer{
   width: 100%;
@@ -142,9 +157,3 @@ code {
 }
 
 
-.link{
-  float: right;
-  font-size: 0.8em;
-  font-weight: bold;
-
-}

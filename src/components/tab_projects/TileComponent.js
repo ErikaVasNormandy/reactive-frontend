@@ -98,12 +98,13 @@ class TileComponent extends Component {
 							<h5>{this.props.titleProp}  </h5>	
 
 						</div>
-						<div className = "col s4 m4 l4 dateStampProject">
-{displayDate} 
-							<div className="link"><a href= {this.props.bodyProp}>Github Repo </a></div>
+						<div className = "col s4 m4 l4 ">
+							<div className="dateStampProject">{displayDate} </div>
 
+							<div className="link"><a href= {this.props.bodyProp}>Github Repo </a></div>
 						</div>
 					</div>
+
 					<ul>
 					{
 						this.props.imagesProp.map(image => {
