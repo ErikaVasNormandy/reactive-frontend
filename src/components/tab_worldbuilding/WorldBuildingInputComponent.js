@@ -23,7 +23,6 @@ class WorldBuildingInputComponent extends Component {
   }
 
 
-
   	state = {
                  action: "",
                  title: "",
