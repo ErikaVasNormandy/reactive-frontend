@@ -30,16 +30,17 @@
   display: inline-block;
   width: 15%;
 }
-.navBar li:hover{
+.navBar a:hover{
 	background-color: rgba(250,250,250,0.5);
 	color: black;
 }
-.navBar li:active{
+.navBar a:active{
 	background-color: white;
 	color: black;
 }
 
 .navBar a {
+  padding: 1.2em 1.2em 1.2em 1.2em;
 	color: white;
 }
 .navBar a:hover{
