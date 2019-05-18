@@ -5,7 +5,6 @@ import WorldBuildingInputComponent from './WorldBuildingInputComponent';
 import WorldBuildingListComponent from './WorldBuildingListComponent';
 import WorldBuildingTileComponent from './WorldBuildingTileComponent';
 
-import CharsheetContainerComponent from './CharacterProfiles/CharsheetContainerComponent';
 import sharedStyles from '../../App.css'
 
 require('dotenv').config();
@@ -224,7 +223,7 @@ class WorldBuildingContainerComponent extends Component {
             <WorldBuildingListComponent worldbuildings={PoliticsFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
 
             <h4>Characters</h4>
-            <CharsheetContainerComponent/>
+            <WorldBuildingListComponent worldbuildings={CharactersFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
             
 
             <h4>Concept Scrapbook</h4>
