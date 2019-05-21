@@ -129,7 +129,7 @@ class WorldBuildingContainerComponent extends Component {
                   <li><h6>&nbsp;Environment</h6></li>
                   <li><h6>&nbsp;Politics</h6></li>
                   <li><h6>&nbsp;Characters</h6></li>
-                  <li><h6>&nbsp;Concept Scrapbook</h6></li>
+                  <li><h6>&nbsp;Concept &nbsp;Scrapbook</h6></li>
                   <li><h6>&nbsp;</h6></li>
                 </ul>
               </td>
