@@ -17,3 +17,37 @@ fixed 77 of 77 vulnerabilities in 36905 scanned packages
 
 ASCI-Red@ASCI-Red MINGW64 ~/Desktop/Workspace/reactive-frontend (6-EnhanceChar)
 
+
+npm install react-scripts@latest
+
+ASCI-Red@ASCI-Red MINGW64 ~/Desktop/Workspace/reactive-frontend/src (master)
+$ npm install react-scripts@latest
+npm WARN deprecated fsevents@2.0.6: Please update: there are crash fixes
+
+> core-js-pure@3.1.1 postinstall C:\Users\ASCI-Red\Desktop\Workspace\reactive-frontend\node_modules\core-js-pure
+> node scripts/postinstall
+
+Thank you for using core-js ( https://github.com/zloirock/core-js )!
+
+Please consider supporting of core-js on Open Collective or Patreon:
+> https://opencollective.com/core-js
+> https://www.patreon.com/zloirock
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.0.6 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.0.6: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules\jest-haste-map\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ react-scripts@3.0.1
+added 114 packages from 50 contributors, removed 639 packages, updated 247 packages, moved 35 packages and audited 891248 packages in 68.105s
+found 0 vulnerabilities
+
+
+ASCI-Red@ASCI-Red MINGW64 ~/Desktop/Workspace/reactive-frontend/src (master)
+$ npm audit
+
+
