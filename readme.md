@@ -1,9 +1,12 @@
-Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## A Repo I use to keep up to date on tech stacks
 
 I'm hoping to do more security-oriented work in the future, primarily in web security and networking.
 
+
+
+
+Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
