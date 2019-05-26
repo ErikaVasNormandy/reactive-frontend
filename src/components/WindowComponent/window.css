@@ -14,7 +14,7 @@
 }
 
 .window h1,h2,h3,h4,h5,h6{
-
+    font-size: 2em;
 }
 
 .windowDisplay{
@@ -25,6 +25,6 @@
     font-family: Palatino, "Palatino Linotype";
 }
 .windowText{
-	padding-top: 200px;
+    padding-top: 200px;
     font-size: 4em;
 }
