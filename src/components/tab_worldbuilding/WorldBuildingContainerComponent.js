@@ -6,6 +6,13 @@ import WorldBuildingListComponent from './WorldBuildingListComponent';
 import WorldBuildingTileComponent from './WorldBuildingTileComponent';
 
 import sharedStyles from '../../App.css'
+import { useState,useRef } from 'react';
+import { setConfig } from 'react-hot-loader';
+
+setConfig({
+  // set this flag to support SFC if patch is not landed
+  pureSFC: true
+});
 
 require('dotenv').config();
 
@@ -39,8 +46,6 @@ class WorldBuildingContainerComponent extends Component {
           this.setState({
             worldbuildings: res.data
           })
-
-
         }
       })
       .catch(err => console.log(err))
@@ -56,15 +61,12 @@ class WorldBuildingContainerComponent extends Component {
       .catch(err => console.log(err))
   }
 
-
-
   toggleAdminItem(e){
     var auth = window.prompt("Create a New Post: ")
     if(auth === `${process.env.REACT_APP_PW}`){
     this.setState({ 
       showAdminPanel: !this.state.showAdminPanel 
     });
-
   }
 }
   componentWillUnmount() {
@@ -76,39 +78,33 @@ class WorldBuildingContainerComponent extends Component {
     {/* What is this for? */}
     let { worldbuildings } = this.state;
 
-
     const SettingFilter = worldbuildings.filter(item => {
-
       return item.subject.includes('Setting');
     })
-
-
-
     const AtomcraftFilter = worldbuildings.filter(item => {
-
       return item.subject.includes('Atomcraft');
     })
-
     const EnvironmentFilter = worldbuildings.filter(item => {
-
       return item.subject.includes('Env');
     })
-
     const PoliticsFilter = worldbuildings.filter(item => {
-
       return item.subject.includes('Politics');
     })
-
     const CharactersFilter = worldbuildings.filter(item => {
-
       return item.subject.includes('Characters');
     })
-
-
     const PlotFilter = worldbuildings.filter(item => {
-
       return item.subject.includes('Plot');
     })
+
+    function examplefunction() {
+
+    const scrollToRef=(ref) => window.scrollTo(0,ref.current.offsetTop)
+
+   	const myRef = useRef(null)
+
+  	const executeScroll = () => scrollToRef(myRef)
+    }
 
     return(
       <div>
@@ -124,7 +120,7 @@ class WorldBuildingContainerComponent extends Component {
               <td>
                 <ul className = "worldbuildinglist">
                   <li><h6>&nbsp;Intro</h6></li>
-                  <li><h6>&nbsp;Setting</h6></li>
+                  <li onClick={examplefunction}><h6>&nbsp;Setting</h6></li>
                   <li><h6>&nbsp;Atomcraft</h6></li>
                   <li><h6>&nbsp;Environment</h6></li>
                   <li><h6>&nbsp;Politics</h6></li>
@@ -210,7 +206,7 @@ class WorldBuildingContainerComponent extends Component {
             </div>
 
 
-            <h4>Setting</h4>
+            <h4 >Setting</h4>
             <WorldBuildingListComponent worldbuildings={SettingFilter} deleteWorldBuilding={this.deleteWorldBuilding} isVisible={this.state.showAdminPanel}/>
 
             <h4>Atomcraft</h4>
