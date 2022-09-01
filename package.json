@@ -49,6 +49,6 @@
   "proxy": "http://reactive.scavengers-repo.com:5000/",
   "devDependencies": {
     "moment": "^2.24.0",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^5.0.1"
   }
 }
